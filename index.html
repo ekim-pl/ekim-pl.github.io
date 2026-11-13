@@ -27,6 +27,7 @@
         font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
         line-height: 1.6;
       }
+      img { height: auto; }
       a { color: inherit; text-decoration: none; }
       a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
       .wrap { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
@@ -67,7 +68,7 @@
       .hero-art { position: relative; display: grid; place-items: center; min-height: 500px; }
       .hero-art::before { content: ""; position: absolute; width: min(38vw, 430px); aspect-ratio: 1; border: 1px solid rgba(39,229,242,.31); border-radius: 50%; box-shadow: 0 0 75px rgba(39,229,242,.09), inset 0 0 55px rgba(39,229,242,.06); }
       .hero-art::after { content: ""; position: absolute; width: min(43vw, 500px); aspect-ratio: 1; border: 1px solid rgba(239,22,141,.16); border-radius: 50%; transform: rotate(-21deg) scaleY(.83); }
-      .hero-art img { position: relative; z-index: 1; display: block; width: min(100%, 460px); filter: drop-shadow(0 18px 45px rgba(0,0,0,.38)); }
+      .hero-art img { border-radius: 50%; position: relative; z-index: 1; display: block; width: min(100%, 460px); filter: drop-shadow(0 18px 45px rgba(0,0,0,.38)); }
       .art-label { position: absolute; z-index: 1; right: 0; bottom: 21px; color: #aeb5c2; font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
       .section { padding: 118px 0; }
       .section-kicker { color: var(--pink); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
@@ -186,7 +187,7 @@
   <body>
     <header class="site-header">
       <nav class="nav wrap" aria-label="Nawigacja główna" data-i18n-aria="navLabel">
-        <a class="brand" href="#start" aria-label="ekim — strona główna" data-i18n-aria="homeLabel"><img src="grafiki/ekim/ekim-logo.png" alt="ekim"></a>
+        <a class="brand" href="#start" aria-label="ekim — strona główna" data-i18n-aria="homeLabel"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a>
         <div class="nav-links">
           <a href="#profil" data-i18n="navProfile">Profil</a>
           <a href="#warsztat" data-i18n="navWorkshop">Warsztat</a>
@@ -212,7 +213,7 @@
             </div>
           </div>
           <div class="hero-art">
-            <img src="grafiki/ekim/ekim-avatar.png" alt="Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami" data-i18n-alt="avatarAlt">
+            <img src="grafiki/ekim/ekim-avatar-480.webp" srcset="grafiki/ekim/ekim-avatar-480.webp 480w, grafiki/ekim/ekim-avatar-920.webp 920w" sizes="(max-width: 560px) 340px, (max-width: 800px) 45vw, 460px" width="480" height="480" fetchpriority="high" decoding="async" alt="Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami" data-i18n-alt="avatarAlt">
             <div class="art-label" data-i18n="artLabel">ciekawość / buduj / powtarzaj</div>
           </div>
         </div>
@@ -220,7 +221,7 @@
 
       <section class="section" id="profil" aria-labelledby="profile-title">
         <div class="about wrap">
-          <div class="story-frame"><img src="grafiki/ekim/ekim-story.png" alt="Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki" data-i18n-alt="storyAlt"></div>
+          <div class="story-frame"><img src="grafiki/ekim/ekim-story-480.webp" srcset="grafiki/ekim/ekim-story-480.webp 480w, grafiki/ekim/ekim-story-800.webp 800w" sizes="(max-width: 560px) 366px, 480px" width="480" height="853" loading="lazy" decoding="async" alt="Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki" data-i18n-alt="storyAlt"></div>
           <div class="about-copy">
             <div class="section-kicker" data-i18n="profileKicker">01 / Poznaj klimat</div>
             <h2 id="profile-title"><span data-i18n="profileTitle1">Niech pomysł</span><br><span data-i18n="profileTitle2">zacznie działać.</span></h2>
@@ -312,7 +313,7 @@
       </section>
 
       <section class="banner" aria-label="ekim w swoim warsztacie" data-i18n-aria="bannerLabel">
-        <img src="grafiki/ekim/ekim-cover.png" alt="ekim pracuje nad małym elektronicznym projektem w warsztacie" data-i18n-alt="bannerAlt">
+        <img src="grafiki/ekim/ekim-cover-1080.webp" srcset="grafiki/ekim/ekim-cover-1080.webp 1080w, grafiki/ekim/ekim-cover-1920.webp 1920w" sizes="100vw" width="1080" height="360" loading="lazy" decoding="async" alt="ekim pracuje nad małym elektronicznym projektem w warsztacie" data-i18n-alt="bannerAlt">
         <div class="banner-caption"><p data-i18n="bannerCaption">Pomyśl · zbuduj · ulepsz</p></div>
       </section>
 
@@ -325,7 +326,7 @@
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-inner wrap"><a href="#start" aria-label="Wróć na początek" data-i18n-aria="backToTop"><img src="grafiki/ekim/ekim-logo.png" alt="ekim"></a><span data-i18n="footerText">Cyfrowy warsztat ekim</span><span>© 2026</span></div>
+      <div class="footer-inner wrap"><a href="#start" aria-label="Wróć na początek" data-i18n-aria="backToTop"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a><span data-i18n="footerText">Cyfrowy warsztat ekim</span><span>© 2026</span></div>
     </footer>
     <script>
       const translations = {
