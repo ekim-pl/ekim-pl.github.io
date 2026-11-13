@@ -1,0 +1,383 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#090a0f">
+    <meta name="description" content="Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów." data-page-description>
+    <title>ekim — cyfrowy warsztat</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #090a0f;
+        --panel: #11131b;
+        --ink: #f4f1e9;
+        --muted: #a6a6b3;
+        --cyan: #27e5f2;
+        --pink: #ef168d;
+        --line: rgba(255,255,255,.11);
+        --width: 1160px;
+      }
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+      }
+      a { color: inherit; text-decoration: none; }
+      a:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
+      .wrap { width: min(var(--width), calc(100% - 48px)); margin-inline: auto; }
+      .site-header { position: absolute; z-index: 2; inset: 0 0 auto; }
+      .nav { height: 88px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,.12); }
+      .brand img { display: block; width: 122px; height: auto; }
+      .nav-links { display: flex; align-items: center; gap: 38px; color: #d6d5dc; font-size: 13px; letter-spacing: .04em; }
+      .nav-links a { transition: color .2s ease; }
+      .nav-links a:hover { color: var(--cyan); }
+      .nav-links .nav-cta { padding: 11px 17px; border: 1px solid rgba(39,229,242,.58); border-radius: 3px; color: var(--cyan); }
+      .language-switch { display: inline-flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; }
+      .language-switch button { min-width: 31px; padding: 6px 7px; border: 0; border-radius: 2px; background: transparent; color: #a6a6b3; font: 700 10px/1 ui-sans-serif, system-ui, sans-serif; cursor: pointer; }
+      .language-switch button[aria-pressed="true"] { background: var(--cyan); color: #061015; }
+      .language-switch button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
+      .hero {
+        position: relative;
+        min-height: 790px;
+        display: grid;
+        align-items: center;
+        overflow: hidden;
+        background:
+          radial-gradient(ellipse at 73% 42%, rgba(8,130,163,.21), transparent 29%),
+          radial-gradient(ellipse at 82% 66%, rgba(229,16,127,.12), transparent 28%),
+          linear-gradient(112deg, #0b0c12 0%, #10131d 58%, #090a0f 100%);
+      }
+      .hero::before { content: ""; position: absolute; inset: 0; opacity: .18; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.05) 1px, transparent 1px); background-size: 54px 54px; mask-image: linear-gradient(90deg, black, transparent 95%); }
+      .hero-inner { position: relative; display: grid; grid-template-columns: 1fr .85fr; align-items: center; gap: 54px; padding-top: 105px; }
+      .eyebrow { display: flex; align-items: center; gap: 11px; color: var(--cyan); font-size: 11px; font-weight: 700; letter-spacing: .21em; text-transform: uppercase; }
+      .eyebrow::before { content: ""; width: 27px; height: 1px; background: var(--cyan); }
+      h1 { max-width: 650px; margin: 24px 0 20px; font-size: clamp(48px, 6.1vw, 82px); line-height: .99; letter-spacing: -.065em; font-weight: 760; }
+      h1 .accent { color: var(--cyan); }
+      .hero-copy { max-width: 480px; margin: 0; color: #b5b6c2; font-size: 17px; }
+      .actions { display: flex; align-items: center; gap: 25px; margin-top: 34px; }
+      .button { display: inline-flex; align-items: center; gap: 14px; padding: 14px 19px; background: var(--cyan); color: #061015; font-size: 13px; font-weight: 800; letter-spacing: .03em; border-radius: 3px; transition: transform .2s ease, box-shadow .2s ease; }
+      .button:hover { transform: translateY(-2px); box-shadow: 0 8px 28px rgba(39,229,242,.2); }
+      .text-link { color: #d6d5dc; font-size: 13px; }
+      .text-link span { color: var(--pink); padding-left: 6px; }
+      .hero-art { position: relative; display: grid; place-items: center; min-height: 500px; }
+      .hero-art::before { content: ""; position: absolute; width: min(38vw, 430px); aspect-ratio: 1; border: 1px solid rgba(39,229,242,.31); border-radius: 50%; box-shadow: 0 0 75px rgba(39,229,242,.09), inset 0 0 55px rgba(39,229,242,.06); }
+      .hero-art::after { content: ""; position: absolute; width: min(43vw, 500px); aspect-ratio: 1; border: 1px solid rgba(239,22,141,.16); border-radius: 50%; transform: rotate(-21deg) scaleY(.83); }
+      .hero-art img { position: relative; z-index: 1; display: block; width: min(100%, 460px); filter: drop-shadow(0 18px 45px rgba(0,0,0,.38)); }
+      .art-label { position: absolute; z-index: 1; right: 0; bottom: 21px; color: #aeb5c2; font-size: 10px; letter-spacing: .17em; text-transform: uppercase; }
+      .section { padding: 118px 0; }
+      .section-kicker { color: var(--pink); font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; }
+      h2 { margin: 13px 0 18px; font-size: clamp(34px, 4vw, 51px); line-height: 1.08; letter-spacing: -.045em; }
+      .about { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 86px; }
+      .story-frame { position: relative; padding: 12px; background: linear-gradient(145deg, rgba(39,229,242,.34), rgba(239,22,141,.28) 58%, transparent); }
+      .story-frame img { display: block; width: 100%; height: 460px; object-fit: cover; object-position: center 37%; }
+      .story-frame::after { content: "EKIM / WORKSHOP"; position: absolute; right: -23px; bottom: 27px; padding: 8px 12px; background: #0b0c12; color: var(--cyan); font: 700 10px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace; letter-spacing: .15em; }
+      .about-copy p { max-width: 580px; margin: 0 0 15px; color: var(--muted); font-size: 15px; }
+      .about-copy .lead { color: #e2e0e6; font-size: 19px; }
+      .bio-box { margin-top: 27px; padding: 17px 19px 16px; border-left: 2px solid var(--cyan); background: rgba(255,255,255,.025); }
+      .bio-box .section-kicker { margin-bottom: 7px; }
+      .bio-box p { margin: 0; font-size: 13px; }
+      .rule { height: 1px; margin: 26px 0; background: var(--line); }
+      .small-note { display: flex; gap: 13px; color: #d6d5dc; font-size: 13px; }
+      .small-note b { color: var(--cyan); font-family: ui-monospace, monospace; }
+      .workshop { padding-top: 0; }
+      .workshop-head { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 34px; }
+      .workshop-head p { max-width: 390px; margin: 0 0 7px; color: var(--muted); font-size: 14px; }
+      .pillars { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .pillar { min-height: 218px; padding: 26px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); }
+      .pillar-num { display: flex; justify-content: space-between; color: var(--cyan); font: 12px ui-monospace, monospace; }
+      .pillar-num span:last-child { color: var(--pink); }
+      .pillar h3 { margin: 35px 0 8px; font-size: 19px; letter-spacing: -.02em; }
+      .pillar p { margin: 0; color: var(--muted); font-size: 13px; }
+      .resource-head { display: flex; align-items: end; justify-content: space-between; gap: 36px; margin: 64px 0 22px; }
+      .resource-head h3 { margin: 8px 0 0; font-size: 25px; letter-spacing: -.035em; }
+      .resource-head p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 13px; }
+      .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .resource-card { padding: 23px 25px; border: 1px solid var(--line); background: rgba(255,255,255,.018); }
+      .resource-card h4 { margin: 0 0 15px; font-size: 15px; }
+      .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
+      .tag-list li { padding: 7px 10px; border: 1px solid rgba(39,229,242,.2); border-radius: 2px; color: #c9cbd5; font-size: 11px; }
+      .draft-label { display: inline-block; margin-top: 13px; color: #8f91a0; font-size: 10px; letter-spacing: .09em; text-transform: uppercase; }
+      .projects { padding-top: 12px; }
+      .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+      .project-card { display: flex; flex-direction: column; min-height: 235px; padding: 24px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); }
+      .project-card .project-type { color: var(--pink); font: 700 10px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+      .project-card h3 { margin: 26px 0 9px; font-size: 18px; }
+      .project-card p { margin: 0; color: var(--muted); font-size: 13px; }
+      .project-links { display: flex; gap: 8px; margin-top: auto; padding-top: 20px; }
+      .project-links a, .project-links span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 2px; color: #a3a6b2; font-size: 10px; }
+      .project-links span[aria-disabled="true"] { opacity: .6; }
+      .banner { position: relative; overflow: hidden; padding: 0; background: #11131b; }
+      .banner img { display: block; width: 100%; height: auto; }
+      .banner-caption { position: absolute; inset: auto 0 0; padding: 52px 0 23px; background: linear-gradient(transparent, rgba(5,7,12,.78)); text-align: center; }
+      .banner-caption p { margin: 0; color: #fff; font-size: 12px; font-weight: 700; letter-spacing: .25em; text-transform: uppercase; text-shadow: 0 2px 15px #000; }
+      .closing { padding: 95px 0 105px; text-align: center; background: radial-gradient(ellipse at 50% 100%, rgba(18,131,155,.16), transparent 54%); }
+      .closing h2 { max-width: 700px; margin: 15px auto 16px; }
+      .closing p { max-width: 500px; margin: 0 auto; color: var(--muted); font-size: 14px; }
+      .footer { border-top: 1px solid var(--line); color: #888b98; font-size: 11px; }
+      .footer-inner { display: flex; justify-content: space-between; align-items: center; min-height: 76px; }
+      .footer img { width: 74px; opacity: .85; }
+      html[lang="pl"] .story-frame::after { content: "EKIM / WARSZTAT"; }
+      @media (max-width: 800px) {
+        .wrap { width: min(100% - 36px, var(--width)); }
+        .nav { height: 72px; }
+        .brand img { width: 100px; }
+        .nav-links { gap: 17px; font-size: 11px; }
+        .nav-links .nav-cta { padding: 9px 11px; }
+        .language-switch button { min-width: 27px; padding-inline: 5px; }
+        .hero { min-height: 720px; }
+        .hero-inner { grid-template-columns: 1.1fr .9fr; gap: 14px; padding-top: 80px; }
+        h1 { font-size: clamp(48px, 8vw, 68px); }
+        .hero-copy { font-size: 15px; }
+        .hero-art { min-height: 380px; }
+        .hero-art img { width: 118%; max-width: none; }
+        .art-label { right: 5px; bottom: 0; font-size: 8px; }
+        .section { padding: 88px 0; }
+        .about { gap: 42px; }
+        .story-frame img { height: 390px; }
+      }
+      @media (max-width: 560px) {
+        .wrap { width: calc(100% - 34px); }
+        .nav-links { gap: 14px; }
+        .nav-links a:first-child { display: none; }
+        .nav-links { gap: 7px; }
+        .nav-links .nav-cta { padding: 8px 8px; }
+        .nav-links a[href="#projekty"] { display: none; }
+        .language-switch { gap: 1px; }
+        .language-switch button { min-width: 23px; padding: 6px 4px; }
+        .hero { min-height: auto; padding: 130px 0 48px; }
+        .hero-inner { grid-template-columns: 1fr; gap: 8px; padding-top: 0; }
+        h1 { max-width: 400px; margin-top: 20px; font-size: clamp(53px, 16vw, 74px); }
+        .hero-copy { max-width: 420px; }
+        .actions { gap: 17px; margin-top: 25px; }
+        .button { padding: 13px 15px; }
+        .hero-art { min-height: 300px; margin-top: 8px; }
+        .hero-art img { width: min(84vw, 340px); }
+        .hero-art::before { width: 75vw; }
+        .hero-art::after { width: 84vw; }
+        .art-label { right: 0; bottom: 4px; }
+        .section { padding: 72px 0; }
+        .about { grid-template-columns: 1fr; gap: 34px; }
+        .story-frame { width: min(100%, 390px); margin-inline: auto; }
+        .story-frame img { height: 430px; }
+        .workshop-head { display: block; margin-bottom: 25px; }
+        .workshop-head p { max-width: 450px; }
+        .resource-head { display: block; margin: 45px 0 17px; }
+        .resource-head p { margin-top: 12px; }
+        .resource-grid, .project-grid { grid-template-columns: 1fr; }
+        .project-card { min-height: 205px; }
+        .pillars { grid-template-columns: 1fr; gap: 10px; }
+        .pillar { min-height: 174px; }
+        .pillar h3 { margin-top: 22px; }
+        .banner-caption { padding: 38px 0 11px; }
+        .banner-caption p { font-size: 8px; letter-spacing: .15em; }
+        .closing { padding: 74px 0 80px; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        html { scroll-behavior: auto; }
+        *, *::before, *::after { transition-duration: .01ms !important; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <nav class="nav wrap" aria-label="Nawigacja główna" data-i18n-aria="navLabel">
+        <a class="brand" href="#start" aria-label="ekim — strona główna" data-i18n-aria="homeLabel"><img src="grafiki/ekim/ekim-logo.png" alt="ekim"></a>
+        <div class="nav-links">
+          <a href="#profil" data-i18n="navProfile">Profil</a>
+          <a href="#warsztat" data-i18n="navWorkshop">Warsztat</a>
+          <a href="#projekty" data-i18n="navProjects">Projekty</a>
+          <a class="nav-cta" href="#koniec"><span data-i18n="navMeet">Poznaj ekim</span> <span aria-hidden="true">↗</span></a>
+          <div class="language-switch" role="group" aria-label="Wybierz język" data-i18n-aria="languageLabel">
+            <button type="button" data-lang="pl" aria-pressed="true">PL</button>
+            <button type="button" data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="hero" id="start" aria-labelledby="hero-title">
+        <div class="hero-inner wrap">
+          <div>
+            <div class="eyebrow" data-i18n="heroEyebrow">Cyfrowy warsztat · ekim</div>
+            <h1 id="hero-title"><span data-i18n="heroGreeting">Cześć,</span><br><span><span data-i18n="heroIntro">tu</span> <span class="accent">ekim.</span></span></h1>
+            <p class="hero-copy" data-i18n="heroCopy">Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.</p>
+            <div class="actions">
+              <a class="button" href="#profil"><span data-i18n="heroButton">Zajrzyj do środka</span> <span aria-hidden="true">↘</span></a>
+              <a class="text-link" href="#warsztat"><span data-i18n="heroLink">Odkryj warsztat</span> <span aria-hidden="true">✳</span></a>
+            </div>
+          </div>
+          <div class="hero-art">
+            <img src="grafiki/ekim/ekim-avatar.png" alt="Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami" data-i18n-alt="avatarAlt">
+            <div class="art-label" data-i18n="artLabel">ciekawość / buduj / powtarzaj</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="profil" aria-labelledby="profile-title">
+        <div class="about wrap">
+          <div class="story-frame"><img src="grafiki/ekim/ekim-story.png" alt="Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki" data-i18n-alt="storyAlt"></div>
+          <div class="about-copy">
+            <div class="section-kicker" data-i18n="profileKicker">01 / Poznaj klimat</div>
+            <h2 id="profile-title"><span data-i18n="profileTitle1">Niech pomysł</span><br><span data-i18n="profileTitle2">zacznie działać.</span></h2>
+            <p class="lead" data-i18n="profileLead">ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.</p>
+            <p data-i18n="profileCopy">Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.</p>
+            <div class="rule"></div>
+            <div class="small-note"><b>↳</b><span data-i18n="profileNote">Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.</span></div>
+            <div class="bio-box">
+              <div class="section-kicker" data-i18n="bioHeading">O mnie</div>
+              <p data-i18n="bioPlaceholder">Miejsce na 2–4 zdania o Tobie: czym się zajmujesz, co Cię ciekawi i co chcesz pokazać na tej stronie.</p>
+              <span class="draft-label" data-i18n="fillInLabel">Do uzupełnienia</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section workshop" id="warsztat" aria-labelledby="workshop-title">
+        <div class="wrap">
+          <div class="workshop-head">
+            <div>
+              <div class="section-kicker" data-i18n="workshopKicker">02 / Tryb warsztatu</div>
+              <h2 id="workshop-title"><span data-i18n="workshopTitle1">Od iskry do</span><br><span data-i18n="workshopTitle2">pierwszego prototypu.</span></h2>
+            </div>
+            <p data-i18n="workshopCopy">Każda rzecz zaczyna się od ciekawości. Potem przychodzi czas na próby, poprawki i satysfakcję z tego, że wreszcie działa.</p>
+          </div>
+          <div class="pillars">
+            <article class="pillar">
+              <div class="pillar-num"><span data-i18n="pillar1Label">01 — ODKRYWAJ</span><span>✳</span></div>
+              <h3 data-i18n="pillar1Title">Zadawaj pytania</h3>
+              <p data-i18n="pillar1Copy">Najciekawsze rzeczy zaczynają się od prostego „sprawdźmy”.</p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-num"><span data-i18n="pillar2Label">02 — BUDUJ</span><span>⌁</span></div>
+              <h3 data-i18n="pillar2Title">Łącz kropki</h3>
+              <p data-i18n="pillar2Copy">Kod, narzędzia i odrobina wyobraźni — niech pomysł zejdzie z ekranu.</p>
+            </article>
+            <article class="pillar">
+              <div class="pillar-num"><span data-i18n="pillar3Label">03 — POWTÓRZ</span><span>↻</span></div>
+              <h3 data-i18n="pillar3Title">Testuj i poprawiaj</h3>
+              <p data-i18n="pillar3Copy">Dobry prototyp to zaproszenie do kolejnego eksperymentu.</p>
+            </article>
+          </div>
+          <div class="resource-head">
+            <div><div class="section-kicker" data-i18n="equipmentKicker">03 / Zaplecze</div><h3 data-i18n="equipmentTitle">Maszyny i technologie</h3></div>
+            <p data-i18n="equipmentCopy">Poniższe przykłady są propozycją struktury — podmień je na sprzęt i narzędzia, z których naprawdę korzystasz.</p>
+          </div>
+          <div class="resource-grid">
+            <article class="resource-card">
+              <h4 data-i18n="machinesTitle">Maszyny</h4>
+              <ul class="tag-list"><li data-i18n="machine1">Drukarka 3D · model</li><li data-i18n="machine2">Stacja lutownicza</li><li data-i18n="machine3">Nazwa urządzenia</li></ul>
+              <span class="draft-label" data-i18n="proposalLabel">Propozycje do potwierdzenia</span>
+            </article>
+            <article class="resource-card">
+              <h4 data-i18n="technologyTitle">Technologie</h4>
+              <ul class="tag-list"><li data-i18n="technology1">CAD / modelowanie</li><li data-i18n="technology2">Elektronika / mikrokontrolery</li><li data-i18n="technology3">Programowanie</li></ul>
+              <span class="draft-label" data-i18n="proposalLabel">Propozycje do potwierdzenia</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section projects" id="projekty" aria-labelledby="projects-title">
+        <div class="wrap">
+          <div class="workshop-head">
+            <div><div class="section-kicker" data-i18n="projectsKicker">04 / Rzeczy w budowie</div><h2 id="projects-title" data-i18n="projectsTitle">Projekty</h2></div>
+            <p data-i18n="projectsCopy">Krótka zajawka, jedno zdjęcie i link do kodu lub pliku do druku — tu pokażemy efekty pracy warsztatu.</p>
+          </div>
+          <div class="project-grid">
+            <article class="project-card">
+              <span class="project-type" data-i18n="projectSlot">Miejsce na projekt</span>
+              <h3 data-i18n="project1Title">Nazwa projektu</h3>
+              <p data-i18n="projectPlaceholder">Dodaj krótką zajawkę: co powstało, jak działa i co było w tym najciekawsze.</p>
+              <div class="project-links"><span aria-disabled="true">GitHub ↗</span><span aria-disabled="true">Printables ↗</span></div>
+            </article>
+            <article class="project-card">
+              <span class="project-type" data-i18n="projectSlot">Miejsce na projekt</span>
+              <h3 data-i18n="project2Title">Nazwa projektu</h3>
+              <p data-i18n="projectPlaceholder">Dodaj krótką zajawkę: co powstało, jak działa i co było w tym najciekawsze.</p>
+              <div class="project-links"><span aria-disabled="true">GitHub ↗</span><span aria-disabled="true">Printables ↗</span></div>
+            </article>
+            <article class="project-card">
+              <span class="project-type" data-i18n="projectSlot">Miejsce na projekt</span>
+              <h3 data-i18n="project3Title">Nazwa projektu</h3>
+              <p data-i18n="projectPlaceholder">Dodaj krótką zajawkę: co powstało, jak działa i co było w tym najciekawsze.</p>
+              <div class="project-links"><span aria-disabled="true">GitHub ↗</span><span aria-disabled="true">Printables ↗</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner" aria-label="ekim w swoim warsztacie" data-i18n-aria="bannerLabel">
+        <img src="grafiki/ekim/ekim-cover.png" alt="ekim pracuje nad małym elektronicznym projektem w warsztacie" data-i18n-alt="bannerAlt">
+        <div class="banner-caption"><p data-i18n="bannerCaption">Pomyśl · zbuduj · ulepsz</p></div>
+      </section>
+
+      <section class="closing" id="koniec" aria-labelledby="closing-title">
+        <div class="wrap">
+          <div class="section-kicker" data-i18n="closingKicker">05 / Ciąg dalszy nastąpi</div>
+          <h2 id="closing-title"><span data-i18n="closingTitle1">Warsztat jest otwarty.</span><br><span data-i18n="closingTitle2">Co zbudujemy w głowie?</span></h2>
+          <p data-i18n="closingCopy">To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.</p>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer-inner wrap"><a href="#start" aria-label="Wróć na początek" data-i18n-aria="backToTop"><img src="grafiki/ekim/ekim-logo.png" alt="ekim"></a><span data-i18n="footerText">Cyfrowy warsztat ekim</span><span>© 2026</span></div>
+    </footer>
+    <script>
+      const translations = {
+          pl: {
+          pageTitle: "ekim — cyfrowy warsztat",
+          pageDescription: "Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów.",
+          navLabel: "Nawigacja główna", homeLabel: "ekim — strona główna", languageLabel: "Wybierz język", navProfile: "Profil", navWorkshop: "Warsztat", navProjects: "Projekty", navMeet: "Poznaj ekim",
+          heroEyebrow: "Cyfrowy warsztat · ekim", heroGreeting: "Cześć,", heroIntro: "tu", heroCopy: "Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.", heroButton: "Zajrzyj do środka", heroLink: "Odkryj warsztat", avatarAlt: "Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami", artLabel: "ciekawość / buduj / powtarzaj",
+          profileKicker: "01 / Poznaj klimat", profileTitle1: "Niech pomysł", profileTitle2: "zacznie działać.", profileLead: "ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.", profileCopy: "Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.", profileNote: "Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.", storyAlt: "Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki", bioHeading: "O mnie", bioPlaceholder: "Miejsce na 2–4 zdania o Tobie: czym się zajmujesz, co Cię ciekawi i co chcesz pokazać na tej stronie.", fillInLabel: "Do uzupełnienia",
+          workshopKicker: "02 / Tryb warsztatu", workshopTitle1: "Od iskry do", workshopTitle2: "pierwszego prototypu.", workshopCopy: "Każda rzecz zaczyna się od ciekawości. Potem przychodzi czas na próby, poprawki i satysfakcję z tego, że wreszcie działa.",
+          pillar1Label: "01 — ODKRYWAJ", pillar1Title: "Zadawaj pytania", pillar1Copy: "Najciekawsze rzeczy zaczynają się od prostego „sprawdźmy”.", pillar2Label: "02 — BUDUJ", pillar2Title: "Łącz kropki", pillar2Copy: "Kod, narzędzia i odrobina wyobraźni — niech pomysł zejdzie z ekranu.", pillar3Label: "03 — POWTÓRZ", pillar3Title: "Testuj i poprawiaj", pillar3Copy: "Dobry prototyp to zaproszenie do kolejnego eksperymentu.",
+          equipmentKicker: "03 / Zaplecze", equipmentTitle: "Maszyny i technologie", equipmentCopy: "Poniższe przykłady są propozycją struktury — podmień je na sprzęt i narzędzia, z których naprawdę korzystasz.", machinesTitle: "Maszyny", machine1: "Drukarka 3D · model", machine2: "Stacja lutownicza", machine3: "Nazwa urządzenia", technologyTitle: "Technologie", technology1: "CAD / modelowanie", technology2: "Elektronika / mikrokontrolery", technology3: "Programowanie", proposalLabel: "Propozycje do potwierdzenia",
+          projectsKicker: "04 / Rzeczy w budowie", projectsTitle: "Projekty", projectsCopy: "Krótka zajawka, jedno zdjęcie i link do kodu lub pliku do druku — tu pokażemy efekty pracy warsztatu.", projectSlot: "Miejsce na projekt", project1Title: "Projekt 01", project2Title: "Projekt 02", project3Title: "Projekt 03", projectPlaceholder: "Dodaj krótką zajawkę: co powstało, jak działa i co było w tym najciekawsze.", bannerLabel: "ekim w swoim warsztacie", bannerAlt: "ekim pracuje nad małym elektronicznym projektem w warsztacie", bannerCaption: "Pomyśl · zbuduj · ulepsz",
+          closingKicker: "05 / Ciąg dalszy nastąpi", closingTitle1: "Warsztat jest otwarty.", closingTitle2: "Co zbudujemy w głowie?", closingCopy: "To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.", backToTop: "Wróć na początek", footerText: "Cyfrowy warsztat ekim"
+        },
+        en: {
+          pageTitle: "ekim — digital workshop",
+          pageDescription: "Meet ekim — a digital workshop full of code, experiments, and new ideas.",
+          navLabel: "Main navigation", homeLabel: "ekim — home", languageLabel: "Choose language", navProfile: "Profile", navWorkshop: "Workshop", navProjects: "Projects", navMeet: "Meet ekim",
+          heroEyebrow: "Digital workshop · ekim", heroGreeting: "Hello,", heroIntro: "I'm", heroCopy: "A place where code meets imagination and good ideas get the space to take shape.", heroButton: "Step inside", heroLink: "Explore the workshop", avatarAlt: "The ekim avatar wearing a hood, with turquoise eyes and headphones", artLabel: "curiosity / build / repeat",
+          profileKicker: "01 / The vibe", profileTitle1: "Let an idea", profileTitle2: "come alive.", profileLead: "ekim is your guide to a digital workshop — a place where curiosity leads to the next experiment.", profileCopy: "The hood, turquoise eyes, and pink spark make the look instantly recognizable. In the background: code on a screen, tools on the table, and that moment when “what if…?” starts to become something real.", profileNote: "Come on in and make yourself at home. Ideas are here to be tested.", storyAlt: "ekim in a creative workshop filled with tools and electronics", bioHeading: "About me", bioPlaceholder: "Space for 2–4 sentences about you: what you do, what interests you, and what you want to share here.", fillInLabel: "To be completed",
+          workshopKicker: "02 / Workshop mode", workshopTitle1: "From first spark", workshopTitle2: "to first prototype.", workshopCopy: "Everything starts with curiosity. Then come the trials, tweaks, and the satisfaction of seeing it finally work.",
+          pillar1Label: "01 — EXPLORE", pillar1Title: "Ask questions", pillar1Copy: "The most interesting things begin with a simple “let's find out.”", pillar2Label: "02 — BUILD", pillar2Title: "Connect the dots", pillar2Copy: "Code, tools, and a little imagination — bring an idea off the screen.", pillar3Label: "03 — REPEAT", pillar3Title: "Test and refine", pillar3Copy: "A good prototype is an invitation to the next experiment.",
+          equipmentKicker: "03 / The setup", equipmentTitle: "Machines and technologies", equipmentCopy: "These examples suggest a structure — replace them with the equipment and tools you actually use.", machinesTitle: "Machines", machine1: "3D printer · model", machine2: "Soldering station", machine3: "Device name", technologyTitle: "Technologies", technology1: "CAD / modeling", technology2: "Electronics / microcontrollers", technology3: "Programming", proposalLabel: "Suggestions to confirm",
+          projectsKicker: "04 / In progress", projectsTitle: "Projects", projectsCopy: "A short intro, one image, and a link to the code or print file — this is where workshop projects will live.", projectSlot: "Project slot", project1Title: "Project 01", project2Title: "Project 02", project3Title: "Project 03", projectPlaceholder: "Add a short intro: what you made, how it works, and what made it interesting.", bannerLabel: "ekim in the workshop", bannerAlt: "ekim working on a small electronic project in the workshop", bannerCaption: "Think it · make it · make it better",
+          closingKicker: "05 / To be continued", closingTitle1: "The workshop is open.", closingTitle2: "What will you dream up?", closingCopy: "This is just the beginning. Stay a while — you might find your next idea right here.", backToTop: "Back to top", footerText: "ekim digital workshop"
+        }
+      };
+
+      function setLanguage(language) {
+        const copy = translations[language];
+        document.documentElement.lang = language;
+        document.documentElement.dataset.lang = language;
+        document.title = copy.pageTitle;
+        document.querySelector("[data-page-description]").content = copy.pageDescription;
+        document.querySelectorAll("[data-i18n]").forEach((element) => {
+          element.textContent = copy[element.dataset.i18n];
+        });
+        document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
+          element.alt = copy[element.dataset.i18nAlt];
+        });
+        document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
+          element.setAttribute("aria-label", copy[element.dataset.i18nAria]);
+        });
+        document.querySelectorAll("[data-lang]").forEach((button) => {
+          button.setAttribute("aria-pressed", String(button.dataset.lang === language));
+        });
+      }
+
+      document.querySelectorAll("[data-lang]").forEach((button) => {
+        button.addEventListener("click", () => setLanguage(button.dataset.lang));
+      });
+    </script>
+  </body>
+</html>
