@@ -90,8 +90,5 @@
   "projectTagsLabel": "Kategorie i technologie",
   "tagMusic": "Muzyka",
   "tagFirmwareDirectory": "Katalog firmware",
-  "tagAutomation": "Automatyzacja",
-  "copyDiscord": "Kopiuj nazwę Discord: ekim_pl",
-  "discordCopied": "Skopiowano: ekim_pl",
-  "discordCopyFallback": "Skopiuj ręcznie: ekim_pl"
+  "tagAutomation": "Automatyzacja"
 }

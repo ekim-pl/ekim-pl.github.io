@@ -90,8 +90,5 @@
   "projectTagsLabel": "Categories and technologies",
   "tagMusic": "Music",
   "tagFirmwareDirectory": "Firmware directory",
-  "tagAutomation": "Automation",
-  "copyDiscord": "Copy Discord username: ekim_pl",
-  "discordCopied": "Copied: ekim_pl",
-  "discordCopyFallback": "Copy manually: ekim_pl"
+  "tagAutomation": "Automation"
 }
