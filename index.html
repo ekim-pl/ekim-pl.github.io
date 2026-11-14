@@ -99,6 +99,7 @@
       .resource-head p { max-width: 390px; margin: 0 0 4px; color: var(--muted); font-size: 13px; }
       .resource-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
       .resource-card { padding: 23px 25px; border: 1px solid var(--line); background: rgba(255,255,255,.018); }
+      .resource-detail { margin: 12px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
       .resource-card h4 { margin: 0 0 15px; font-size: 15px; }
       .tag-list { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; margin: 0; list-style: none; }
       .tag-list li { padding: 7px 10px; border: 1px solid rgba(39,229,242,.2); border-radius: 2px; color: #c9cbd5; font-size: 11px; }
@@ -231,8 +232,7 @@
             <div class="small-note"><b>↳</b><span data-i18n="profileNote">Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.</span></div>
             <div class="bio-box">
               <div class="section-kicker" data-i18n="bioHeading">O mnie</div>
-              <p data-i18n="bioPlaceholder">Miejsce na 2–4 zdania o Tobie: czym się zajmujesz, co Cię ciekawi i co chcesz pokazać na tej stronie.</p>
-              <span class="draft-label" data-i18n="fillInLabel">Do uzupełnienia</span>
+              <p data-i18n="bioPlaceholder">Ponad 15 lat praktyki w programowaniu, IT, infrastrukturze oraz architekturze oprogramowania i rozwiązań.</p>
             </div>
           </div>
         </div>
@@ -242,44 +242,38 @@
         <div class="wrap">
           <div class="workshop-head">
             <div>
-              <div class="section-kicker" data-i18n="workshopKicker">02 / Tryb warsztatu</div>
-              <h2 id="workshop-title"><span data-i18n="workshopTitle1">Od iskry do</span><br><span data-i18n="workshopTitle2">pierwszego prototypu.</span></h2>
+              <div class="section-kicker" data-i18n="workshopKicker">02 / Warsztat i pasje</div>
+              <h2 id="workshop-title"><span data-i18n="workshopTitle1">Kod, materia</span><br><span data-i18n="workshopTitle2">i dźwięk.</span></h2>
             </div>
-            <p data-i18n="workshopCopy">Każda rzecz zaczyna się od ciekawości. Potem przychodzi czas na próby, poprawki i satysfakcję z tego, że wreszcie działa.</p>
+            <p data-i18n="workshopCopy">Łączę programowanie, tworzenie fizycznych rzeczy i muzykę. Automatyzuję procesy, drukuję w 3D i eksperymentuję z dźwiękiem. Korzystam z AI świadomie, czerpiąc z ponad 15 lat doświadczenia w IT i projektowaniu rozwiązań.</p>
           </div>
           <div class="pillars">
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar1Label">01 — ODKRYWAJ</span><span>✳</span></div>
-              <h3 data-i18n="pillar1Title">Zadawaj pytania</h3>
-              <p data-i18n="pillar1Copy">Najciekawsze rzeczy zaczynają się od prostego „sprawdźmy”.</p>
+              <div class="pillar-num"><span data-i18n="pillar1Label">01 — AUTOMATYZACJE</span><span>✳</span></div>
+              <h3 data-i18n="pillar1Title">Od pomysłu do procesu</h3>
+              <p data-i18n="pillar1Copy">Procesy biznesowe, wdrożenia i praca z AI.</p>
             </article>
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar2Label">02 — BUDUJ</span><span>⌁</span></div>
-              <h3 data-i18n="pillar2Title">Łącz kropki</h3>
-              <p data-i18n="pillar2Copy">Kod, narzędzia i odrobina wyobraźni — niech pomysł zejdzie z ekranu.</p>
+              <div class="pillar-num"><span data-i18n="pillar2Label">02 — DRUK 3D I WARSZTAT</span><span>⌁</span></div>
+              <h3 data-i18n="pillar2Title">Pomysły nabierają kształtu</h3>
+              <p data-i18n="pillar2Copy">Prototypy, elektronika, części użytkowe i personalizacja.</p>
             </article>
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar3Label">03 — POWTÓRZ</span><span>↻</span></div>
-              <h3 data-i18n="pillar3Title">Testuj i poprawiaj</h3>
-              <p data-i18n="pillar3Copy">Dobry prototyp to zaproszenie do kolejnego eksperymentu.</p>
+              <div class="pillar-num"><span data-i18n="pillar3Label">03 — MUZYKA</span><span>↻</span></div>
+              <h3 data-i18n="pillar3Title">W poszukiwaniu brzmienia</h3>
+              <p data-i18n="pillar3Copy">Produkcja, instrumenty i poszukiwanie własnego brzmienia.</p>
             </article>
           </div>
           <div class="resource-head">
             <div><div class="section-kicker" data-i18n="equipmentKicker">03 / Zaplecze</div><h3 data-i18n="equipmentTitle">Maszyny i technologie</h3></div>
-            <p data-i18n="equipmentCopy">Poniższe przykłady są propozycją struktury — podmień je na sprzęt i narzędzia, z których naprawdę korzystasz.</p>
+            <p data-i18n="equipmentCopy">Narzędzia, które pomagają mi przejść od kodu i projektu do fizycznych rzeczy oraz dźwięku.</p>
           </div>
           <div class="resource-grid">
-            <article class="resource-card">
-              <h4 data-i18n="machinesTitle">Maszyny</h4>
-              <ul class="tag-list"><li data-i18n="machine1">Drukarka 3D · model</li><li data-i18n="machine2">Stacja lutownicza</li><li data-i18n="machine3">Nazwa urządzenia</li></ul>
-              <span class="draft-label" data-i18n="proposalLabel">Propozycje do potwierdzenia</span>
-            </article>
-            <article class="resource-card">
-              <h4 data-i18n="technologyTitle">Technologie</h4>
-              <ul class="tag-list"><li data-i18n="technology1">CAD / modelowanie</li><li data-i18n="technology2">Elektronika / mikrokontrolery</li><li data-i18n="technology3">Programowanie</li></ul>
-              <span class="draft-label" data-i18n="proposalLabel">Propozycje do potwierdzenia</span>
-            </article>
-          </div>
+<article class="resource-card"><h4 data-i18n="machinesTitle">Maszyny i materiały</h4><ul class="tag-list"><li data-i18n="machine1">Snapmaker U1</li><li data-i18n="machine2">Anycubic Kobra S1 Combo</li><li data-i18n="machine3">Snapmaker Artisan 3w1</li><li data-i18n="machine4">Creality Otter · skanowanie 3D</li><li data-i18n="machine5">Stacja lutownicza i narzędzia warsztatowe</li></ul><p class="resource-detail" data-i18n="machineModules">Artisan: lasery 10 W i 1064 nm, przystawka rotacyjna oraz CNC 200 W.</p><p class="resource-detail" data-i18n="materials">PLA, PETG, TPU, ABS/ASA, drewno, sklejka i akryl. Wybrane metale — głównie grawerowanie.</p></article>
+<article class="resource-card"><h4 data-i18n="designTitle">Projektowanie i wytwarzanie</h4><p class="resource-detail" data-i18n="cadTools">Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD</p><p class="resource-detail" data-i18n="slicerTools">Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next</p><p class="resource-detail" data-i18n="laserTools">Snapmaker Luban · Rayforge · LaserGRBL</p></article>
+<article class="resource-card"><h4 data-i18n="technologyTitle">Kod i infrastruktura</h4><ul class="tag-list"><li data-i18n="technology1">Web · mobile · backend</li><li data-i18n="technology2">Laravel · TypeScript</li><li data-i18n="technology3">Docker · Kubernetes · CI/CD</li><li data-i18n="technology4">ESP32 · Raspberry Pi</li></ul></article>
+<article class="resource-card"><h4 data-i18n="musicTitle">Dźwięk i instrumenty</h4><p class="resource-detail" data-i18n="musicGear">Akai MPC, syntezatory, sekwencery i automaty perkusyjne.</p><p class="resource-detail" data-i18n="musicInstruments">Gitary akustyczne, elektryczne i basowe, bębny i perkusja.</p><p class="resource-detail" data-i18n="musicStyles">Trip-hop · boom bap · stoner/doom rock</p></article>
+</div>
         </div>
       </section>
 
@@ -329,31 +323,181 @@
     </footer>
     <script>
       const translations = {
-          pl: {
-          pageTitle: "ekim — cyfrowy warsztat",
-          pageDescription: "Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów.",
-          navLabel: "Nawigacja główna", homeLabel: "ekim — strona główna", languageLabel: "Wybierz język", navProfile: "Profil", navWorkshop: "Warsztat", navProjects: "Projekty", navMeet: "Poznaj ekim",
-          heroEyebrow: "Cyfrowy warsztat · ekim", heroGreeting: "Cześć,", heroIntro: "tu", heroCopy: "Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.", heroButton: "Zajrzyj do środka", heroLink: "Odkryj warsztat", avatarAlt: "Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami", artLabel: "ciekawość / buduj / powtarzaj",
-          profileKicker: "01 / Poznaj klimat", profileTitle1: "Niech pomysł", profileTitle2: "zacznie działać.", profileLead: "ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.", profileCopy: "Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.", profileNote: "Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.", storyAlt: "Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki", bioHeading: "O mnie", bioPlaceholder: "Miejsce na 2–4 zdania o Tobie: czym się zajmujesz, co Cię ciekawi i co chcesz pokazać na tej stronie.", fillInLabel: "Do uzupełnienia",
-          workshopKicker: "02 / Tryb warsztatu", workshopTitle1: "Od iskry do", workshopTitle2: "pierwszego prototypu.", workshopCopy: "Każda rzecz zaczyna się od ciekawości. Potem przychodzi czas na próby, poprawki i satysfakcję z tego, że wreszcie działa.",
-          pillar1Label: "01 — ODKRYWAJ", pillar1Title: "Zadawaj pytania", pillar1Copy: "Najciekawsze rzeczy zaczynają się od prostego „sprawdźmy”.", pillar2Label: "02 — BUDUJ", pillar2Title: "Łącz kropki", pillar2Copy: "Kod, narzędzia i odrobina wyobraźni — niech pomysł zejdzie z ekranu.", pillar3Label: "03 — POWTÓRZ", pillar3Title: "Testuj i poprawiaj", pillar3Copy: "Dobry prototyp to zaproszenie do kolejnego eksperymentu.",
-          equipmentKicker: "03 / Zaplecze", equipmentTitle: "Maszyny i technologie", equipmentCopy: "Poniższe przykłady są propozycją struktury — podmień je na sprzęt i narzędzia, z których naprawdę korzystasz.", machinesTitle: "Maszyny", machine1: "Drukarka 3D · model", machine2: "Stacja lutownicza", machine3: "Nazwa urządzenia", technologyTitle: "Technologie", technology1: "CAD / modelowanie", technology2: "Elektronika / mikrokontrolery", technology3: "Programowanie", proposalLabel: "Propozycje do potwierdzenia",
-          projectsKicker: "04 / Rzeczy w budowie", projectsTitle: "Projekty", projectsCopy: "Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.", projectSlot: "Na warsztacie", project1Title: "Android FM1 Flasher", project1Category: "Eksperymentalna aplikacja Android", project1Copy: "Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.", project2Title: "PXV", project2Category: "CLI / MCP · GrapheneOS", project2Copy: "Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.", projectWebsite: "Strona projektu", project3Title: "Już wkrótce", projectPlaceholder: "Kolejna iskra już padła. Teraz pora zamienić ją w coś, co działa.", bannerLabel: "ekim w swoim warsztacie", bannerAlt: "ekim pracuje nad małym elektronicznym projektem w warsztacie", bannerCaption: "Pomyśl · zbuduj · ulepsz",
-          closingKicker: "05 / Ciąg dalszy nastąpi", closingTitle1: "Warsztat jest otwarty.", closingTitle2: "Co zbudujemy w głowie?", closingCopy: "To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.", backToTop: "Wróć na początek", footerText: "Cyfrowy warsztat ekim"
-        },
-        en: {
-          pageTitle: "ekim — digital workshop",
-          pageDescription: "Meet ekim — a digital workshop full of code, experiments, and new ideas.",
-          navLabel: "Main navigation", homeLabel: "ekim — home", languageLabel: "Choose language", navProfile: "Profile", navWorkshop: "Workshop", navProjects: "Projects", navMeet: "Meet ekim",
-          heroEyebrow: "Digital workshop · ekim", heroGreeting: "Hello,", heroIntro: "I'm", heroCopy: "A place where code meets imagination and good ideas get the space to take shape.", heroButton: "Step inside", heroLink: "Explore the workshop", avatarAlt: "The ekim avatar wearing a hood, with turquoise eyes and headphones", artLabel: "curiosity / build / repeat",
-          profileKicker: "01 / The vibe", profileTitle1: "Let an idea", profileTitle2: "come alive.", profileLead: "ekim is your guide to a digital workshop — a place where curiosity leads to the next experiment.", profileCopy: "The hood, turquoise eyes, and pink spark make the look instantly recognizable. In the background: code on a screen, tools on the table, and that moment when “what if…?” starts to become something real.", profileNote: "Come on in and make yourself at home. Ideas are here to be tested.", storyAlt: "ekim in a creative workshop filled with tools and electronics", bioHeading: "About me", bioPlaceholder: "Space for 2–4 sentences about you: what you do, what interests you, and what you want to share here.", fillInLabel: "To be completed",
-          workshopKicker: "02 / Workshop mode", workshopTitle1: "From first spark", workshopTitle2: "to first prototype.", workshopCopy: "Everything starts with curiosity. Then come the trials, tweaks, and the satisfaction of seeing it finally work.",
-          pillar1Label: "01 — EXPLORE", pillar1Title: "Ask questions", pillar1Copy: "The most interesting things begin with a simple “let's find out.”", pillar2Label: "02 — BUILD", pillar2Title: "Connect the dots", pillar2Copy: "Code, tools, and a little imagination — bring an idea off the screen.", pillar3Label: "03 — REPEAT", pillar3Title: "Test and refine", pillar3Copy: "A good prototype is an invitation to the next experiment.",
-          equipmentKicker: "03 / The setup", equipmentTitle: "Machines and technologies", equipmentCopy: "These examples suggest a structure — replace them with the equipment and tools you actually use.", machinesTitle: "Machines", machine1: "3D printer · model", machine2: "Soldering station", machine3: "Device name", technologyTitle: "Technologies", technology1: "CAD / modeling", technology2: "Electronics / microcontrollers", technology3: "Programming", proposalLabel: "Suggestions to confirm",
-          projectsKicker: "04 / In progress", projectsTitle: "Projects", projectsCopy: "Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.", projectSlot: "On the workbench", project1Title: "Android FM1 Flasher", project1Category: "Experimental Android app", project1Copy: "An experimental Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.", project2Title: "PXV", project2Category: "CLI / MCP · GrapheneOS", project2Copy: "A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.", projectWebsite: "Project site", project3Title: "Coming soon", projectPlaceholder: "The next spark has landed. Time to turn it into something that works.", bannerLabel: "ekim in the workshop", bannerAlt: "ekim working on a small electronic project in the workshop", bannerCaption: "Think it · make it · make it better",
-          closingKicker: "05 / To be continued", closingTitle1: "The workshop is open.", closingTitle2: "What will you dream up?", closingCopy: "This is just the beginning. Stay a while — you might find your next idea right here.", backToTop: "Back to top", footerText: "ekim digital workshop"
-        }
-      };
+  "pl": {
+    "pageTitle": "ekim — cyfrowy warsztat",
+    "pageDescription": "Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów.",
+    "navLabel": "Nawigacja główna",
+    "homeLabel": "ekim — strona główna",
+    "languageLabel": "Wybierz język",
+    "navProfile": "Profil",
+    "navWorkshop": "Warsztat",
+    "navProjects": "Projekty",
+    "navMeet": "Poznaj ekim",
+    "heroEyebrow": "Cyfrowy warsztat · ekim",
+    "heroGreeting": "Cześć,",
+    "heroIntro": "tu",
+    "heroCopy": "Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.",
+    "heroButton": "Zajrzyj do środka",
+    "heroLink": "Odkryj warsztat",
+    "avatarAlt": "Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami",
+    "artLabel": "ciekawość / buduj / powtarzaj",
+    "profileKicker": "01 / Poznaj klimat",
+    "profileTitle1": "Niech pomysł",
+    "profileTitle2": "zacznie działać.",
+    "profileLead": "ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.",
+    "profileCopy": "Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.",
+    "profileNote": "Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.",
+    "storyAlt": "Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki",
+    "bioHeading": "O mnie",
+    "bioPlaceholder": "Ponad 15 lat praktyki w programowaniu, IT, infrastrukturze oraz architekturze oprogramowania i rozwiązań.",
+    "workshopKicker": "02 / Warsztat i pasje",
+    "workshopTitle1": "Kod, materia",
+    "workshopTitle2": "i dźwięk.",
+    "workshopCopy": "Łączę programowanie, tworzenie fizycznych rzeczy i muzykę. Automatyzuję procesy, drukuję w 3D i eksperymentuję z dźwiękiem. Korzystam z AI świadomie, czerpiąc z ponad 15 lat doświadczenia w IT i projektowaniu rozwiązań.",
+    "pillar1Label": "01 — AUTOMATYZACJE",
+    "pillar1Title": "Od pomysłu do procesu",
+    "pillar1Copy": "Procesy biznesowe, wdrożenia i praca z AI.",
+    "pillar2Label": "02 — DRUK 3D I WARSZTAT",
+    "pillar2Title": "Pomysły nabierają kształtu",
+    "pillar2Copy": "Prototypy, elektronika, części użytkowe i personalizacja.",
+    "pillar3Label": "03 — MUZYKA",
+    "pillar3Title": "W poszukiwaniu brzmienia",
+    "pillar3Copy": "Produkcja, instrumenty i poszukiwanie własnego brzmienia.",
+    "equipmentKicker": "03 / Zaplecze",
+    "equipmentTitle": "Maszyny i technologie",
+    "equipmentCopy": "Narzędzia, które pomagają mi przejść od kodu i projektu do fizycznych rzeczy oraz dźwięku.",
+    "machinesTitle": "Maszyny i materiały",
+    "machine1": "Snapmaker U1",
+    "machine2": "Anycubic Kobra S1 Combo",
+    "machine3": "Snapmaker Artisan 3w1",
+    "technologyTitle": "Kod i infrastruktura",
+    "technology1": "Web · mobile · backend",
+    "technology2": "Laravel · TypeScript",
+    "technology3": "Docker · Kubernetes · CI/CD",
+    "projectsKicker": "04 / Rzeczy w budowie",
+    "projectsTitle": "Projekty",
+    "projectsCopy": "Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.",
+    "projectSlot": "Na warsztacie",
+    "project1Title": "Android FM1 Flasher",
+    "project1Category": "Eksperymentalna aplikacja Android",
+    "project1Copy": "Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.",
+    "project2Title": "PXV",
+    "project2Category": "CLI / MCP · GrapheneOS",
+    "project2Copy": "Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.",
+    "projectWebsite": "Strona projektu",
+    "project3Title": "Już wkrótce",
+    "projectPlaceholder": "Kolejna iskra już padła. Teraz pora zamienić ją w coś, co działa.",
+    "bannerLabel": "ekim w swoim warsztacie",
+    "bannerAlt": "ekim pracuje nad małym elektronicznym projektem w warsztacie",
+    "bannerCaption": "Pomyśl · zbuduj · ulepsz",
+    "closingKicker": "05 / Ciąg dalszy nastąpi",
+    "closingTitle1": "Warsztat jest otwarty.",
+    "closingTitle2": "Co zbudujemy w głowie?",
+    "closingCopy": "To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.",
+    "backToTop": "Wróć na początek",
+    "footerText": "Cyfrowy warsztat ekim",
+    "machine4": "Creality Otter · skanowanie 3D",
+    "machine5": "Stacja lutownicza i narzędzia warsztatowe",
+    "machineModules": "Artisan: lasery 10 W i 1064 nm, przystawka rotacyjna oraz CNC 200 W.",
+    "materials": "PLA, PETG, TPU, ABS/ASA, drewno, sklejka i akryl. Wybrane metale — głównie grawerowanie.",
+    "designTitle": "Projektowanie i wytwarzanie",
+    "cadTools": "Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD",
+    "slicerTools": "Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next",
+    "laserTools": "Snapmaker Luban · Rayforge · LaserGRBL",
+    "technology4": "ESP32 · Raspberry Pi",
+    "musicTitle": "Dźwięk i instrumenty",
+    "musicGear": "Akai MPC, syntezatory, sekwencery i automaty perkusyjne.",
+    "musicInstruments": "Gitary akustyczne, elektryczne i basowe, bębny i perkusja.",
+    "musicStyles": "Trip-hop · boom bap · stoner/doom rock"
+  },
+  "en": {
+    "pageTitle": "ekim — digital workshop",
+    "pageDescription": "Meet ekim — a digital workshop full of code, experiments, and new ideas.",
+    "navLabel": "Main navigation",
+    "homeLabel": "ekim — home",
+    "languageLabel": "Choose language",
+    "navProfile": "Profile",
+    "navWorkshop": "Workshop",
+    "navProjects": "Projects",
+    "navMeet": "Meet ekim",
+    "heroEyebrow": "Digital workshop · ekim",
+    "heroGreeting": "Hello,",
+    "heroIntro": "I'm",
+    "heroCopy": "A place where code meets imagination and good ideas get the space to take shape.",
+    "heroButton": "Step inside",
+    "heroLink": "Explore the workshop",
+    "avatarAlt": "The ekim avatar wearing a hood, with turquoise eyes and headphones",
+    "artLabel": "curiosity / build / repeat",
+    "profileKicker": "01 / The vibe",
+    "profileTitle1": "Let an idea",
+    "profileTitle2": "come alive.",
+    "profileLead": "ekim is your guide to a digital workshop — a place where curiosity leads to the next experiment.",
+    "profileCopy": "The hood, turquoise eyes, and pink spark make the look instantly recognizable. In the background: code on a screen, tools on the table, and that moment when “what if…?” starts to become something real.",
+    "profileNote": "Come on in and make yourself at home. Ideas are here to be tested.",
+    "storyAlt": "ekim in a creative workshop filled with tools and electronics",
+    "bioHeading": "About me",
+    "bioPlaceholder": "Over 15 years of hands-on experience in programming, IT, infrastructure, and software and solution architecture.",
+    "workshopKicker": "02 / Workshop and passions",
+    "workshopTitle1": "Code, matter",
+    "workshopTitle2": "and sound.",
+    "workshopCopy": "I bring together programming, making physical things, and music. I automate processes, print in 3D, and experiment with sound. I use AI thoughtfully, drawing on over 15 years of experience in IT and solution design.",
+    "pillar1Label": "01 — AUTOMATION",
+    "pillar1Title": "From idea to workflow",
+    "pillar1Copy": "Business processes, deployments, and working with AI.",
+    "pillar2Label": "02 — 3D PRINTING & MAKING",
+    "pillar2Title": "Ideas take shape",
+    "pillar2Copy": "Prototypes, electronics, functional parts, and personalization.",
+    "pillar3Label": "03 — MUSIC",
+    "pillar3Title": "Exploring sound",
+    "pillar3Copy": "Production, instruments, and finding my own sound.",
+    "equipmentKicker": "03 / The setup",
+    "equipmentTitle": "Machines and technologies",
+    "equipmentCopy": "Tools that help me turn code and designs into physical things and sound.",
+    "machinesTitle": "Machines and materials",
+    "machine1": "Snapmaker U1",
+    "machine2": "Anycubic Kobra S1 Combo",
+    "machine3": "Snapmaker Artisan 3-in-1",
+    "technologyTitle": "Code and infrastructure",
+    "technology1": "Web · mobile · backend",
+    "technology2": "Laravel · TypeScript",
+    "technology3": "Docker · Kubernetes · CI/CD",
+    "projectsKicker": "04 / In progress",
+    "projectsTitle": "Projects",
+    "projectsCopy": "Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.",
+    "projectSlot": "On the workbench",
+    "project1Title": "Android FM1 Flasher",
+    "project1Category": "Experimental Android app",
+    "project1Copy": "An experimental Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.",
+    "project2Title": "PXV",
+    "project2Category": "CLI / MCP · GrapheneOS",
+    "project2Copy": "A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.",
+    "projectWebsite": "Project site",
+    "project3Title": "Coming soon",
+    "projectPlaceholder": "The next spark has landed. Time to turn it into something that works.",
+    "bannerLabel": "ekim in the workshop",
+    "bannerAlt": "ekim working on a small electronic project in the workshop",
+    "bannerCaption": "Think it · make it · make it better",
+    "closingKicker": "05 / To be continued",
+    "closingTitle1": "The workshop is open.",
+    "closingTitle2": "What will you dream up?",
+    "closingCopy": "This is just the beginning. Stay a while — you might find your next idea right here.",
+    "backToTop": "Back to top",
+    "footerText": "ekim digital workshop",
+    "machine4": "Creality Otter · 3D scanning",
+    "machine5": "Soldering station and workshop tools",
+    "machineModules": "Artisan: 10 W and 1064 nm lasers, rotary attachment, and 200 W CNC.",
+    "materials": "PLA, PETG, TPU, ABS/ASA, wood, plywood, and acrylic. Selected metals — mainly engraving.",
+    "designTitle": "Design and fabrication",
+    "cadTools": "Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD",
+    "slicerTools": "Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next",
+    "laserTools": "Snapmaker Luban · Rayforge · LaserGRBL",
+    "technology4": "ESP32 · Raspberry Pi",
+    "musicTitle": "Sound and instruments",
+    "musicGear": "Akai MPC, synthesizers, sequencers, and drum machines.",
+    "musicInstruments": "Acoustic, electric, and bass guitars, drums, and percussion.",
+    "musicStyles": "Trip-hop · boom bap · stoner/doom rock"
+  }
+};
 
       function setLanguage(language) {
         const copy = translations[language];
