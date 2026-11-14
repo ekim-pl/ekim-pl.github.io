@@ -1,11 +1,11 @@
 <!doctype html>
-<html lang="pl">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#090a0f">
-    <meta name="description" content="Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów." data-page-description>
-    <title>ekim — cyfrowy warsztat</title>
+    <meta name="description" content="Meet ekim — a digital workshop full of code, experiments, and new ideas." data-page-description>
+    <title>ekim — digital workshop</title>
     <style>
       :root {
         color-scheme: dark;
@@ -38,10 +38,6 @@
       .nav-links a { transition: color .2s ease; }
       .nav-links a:hover { color: var(--cyan); }
       .nav-links .nav-cta { padding: 11px 17px; border: 1px solid rgba(39,229,242,.58); border-radius: 3px; color: var(--cyan); }
-      .language-switch { display: inline-flex; align-items: center; gap: 3px; padding: 3px; border: 1px solid var(--line); border-radius: 4px; }
-      .language-switch button { min-width: 31px; padding: 6px 7px; border: 0; border-radius: 2px; background: transparent; color: #a6a6b3; font: 700 10px/1 ui-sans-serif, system-ui, sans-serif; cursor: pointer; }
-      .language-switch button[aria-pressed="true"] { background: var(--cyan); color: #061015; }
-      .language-switch button:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; }
       .ui-icon { display: inline-block; flex: 0 0 auto; width: 22px; height: 22px; vertical-align: middle; }
       .section-kicker { display: flex; align-items: center; gap: 9px; }
       .section-kicker .ui-icon { width: 18px; height: 18px; }
@@ -160,9 +156,12 @@
       .closing p { max-width: 500px; margin: 0 auto; color: var(--muted); font-size: 14px; }
       .footer { border-top: 1px solid var(--line); color: #888b98; font-size: 11px; }
       .footer-inner { display: flex; justify-content: space-between; align-items: center; min-height: 76px; flex-wrap: wrap; gap: 16px; padding-block: 20px; }
-      .social-links { display: flex; align-items: center; gap: 18px; }
+      .social-links { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; }
       .social-links a { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); transition: color .2s ease; }
       .social-links a:hover, .social-links a:focus-visible { color: var(--cyan); }
+      .discord-contact { display: inline-flex; align-items: center; gap: 6px; padding: 0; border: 0; background: transparent; color: var(--muted); font: inherit; cursor: pointer; }
+      .discord-contact:hover, .discord-contact:focus-visible { color: var(--cyan); }
+      .discord-contact:focus-visible { outline: 2px solid var(--cyan); outline-offset: 5px; }
       .social-links svg { flex: 0 0 auto; }
       @media (max-width: 560px) { .social-links { width: 100%; justify-content: center; order: 1; } }
       .footer img { width: 74px; opacity: .85; }
@@ -173,7 +172,6 @@
         .brand img { width: 100px; }
         .nav-links { gap: 17px; font-size: 11px; }
         .nav-links .nav-cta { padding: 9px 11px; }
-        .language-switch button { min-width: 27px; padding-inline: 5px; }
         .hero { min-height: 720px; }
         .hero-inner { grid-template-columns: 1.1fr .9fr; gap: 14px; padding-top: 80px; }
         h1 { font-size: clamp(48px, 8vw, 68px); }
@@ -192,8 +190,6 @@
         .nav-links { gap: 7px; }
         .nav-links .nav-cta { padding: 8px 8px; }
         .nav-links a[href="#projekty"] { display: none; }
-        .language-switch { gap: 1px; }
-        .language-switch button { min-width: 23px; padding: 6px 4px; }
         .hero { min-height: auto; padding: 130px 0 48px; }
         .hero-inner { grid-template-columns: 1fr; gap: 8px; padding-top: 0; }
         h1 { max-width: 400px; margin-top: 20px; font-size: clamp(53px, 16vw, 74px); }
@@ -230,17 +226,13 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav wrap" aria-label="Nawigacja główna" data-i18n-aria="navLabel">
-        <a class="brand" href="#start" aria-label="ekim — strona główna" data-i18n-aria="homeLabel"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a>
+      <nav class="nav wrap" aria-label="Main navigation" data-i18n-aria="navLabel">
+        <a class="brand" href="#start" aria-label="ekim — home" data-i18n-aria="homeLabel"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a>
         <div class="nav-links">
-          <a href="#profil" data-i18n="navProfile">Profil</a>
-          <a href="#warsztat" data-i18n="navWorkshop">Warsztat</a>
-          <a href="#projekty" data-i18n="navProjects">Projekty</a>
-          <a class="nav-cta" href="#koniec"><span data-i18n="navMeet">Poznaj ekim</span> <span aria-hidden="true">↗</span></a>
-          <div class="language-switch" role="group" aria-label="Wybierz język" data-i18n-aria="languageLabel">
-            <button type="button" data-lang="pl" aria-pressed="true">PL</button>
-            <button type="button" data-lang="en" aria-pressed="false">EN</button>
-          </div>
+          <a href="#profil" data-i18n="navProfile">Profile</a>
+          <a href="#warsztat" data-i18n="navWorkshop">Workshop</a>
+          <a href="#projekty" data-i18n="navProjects">Projects</a>
+          <a class="nav-cta" href="#koniec"><span data-i18n="navMeet">Meet ekim</span> <span aria-hidden="true">↗</span></a>
         </div>
       </nav>
     </header>
@@ -248,34 +240,34 @@
       <section class="hero" id="start" aria-labelledby="hero-title">
         <div class="hero-inner wrap">
           <div>
-            <div class="eyebrow" data-i18n="heroEyebrow">Cyfrowy warsztat · ekim</div>
-            <h1 id="hero-title"><span data-i18n="heroGreeting">Cześć,</span><br><span><span data-i18n="heroIntro">tu</span> <span class="accent">ekim.</span></span></h1>
-            <p class="hero-copy" data-i18n="heroCopy">Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.</p>
+            <div class="eyebrow" data-i18n="heroEyebrow">Digital workshop · ekim</div>
+            <h1 id="hero-title"><span data-i18n="heroGreeting">Hello,</span><br><span><span data-i18n="heroIntro">I&#x27;m</span> <span class="accent">ekim.</span></span></h1>
+            <p class="hero-copy" data-i18n="heroCopy">A place where code meets imagination and good ideas get the space to take shape.</p>
             <div class="actions">
-              <a class="button" href="#profil"><span data-i18n="heroButton">Zajrzyj do środka</span> <span aria-hidden="true">↘</span></a>
-              <a class="text-link" href="#warsztat"><span data-i18n="heroLink">Odkryj warsztat</span> <span aria-hidden="true">✳</span></a>
+              <a class="button" href="#profil"><span data-i18n="heroButton">Step inside</span> <span aria-hidden="true">↘</span></a>
+              <a class="text-link" href="#warsztat"><span data-i18n="heroLink">Explore the workshop</span> <span aria-hidden="true">✳</span></a>
             </div>
           </div>
           <div class="hero-art">
-            <button class="avatar-trigger" type="button" aria-label="Odtwórz film o ekim" data-i18n-aria="playIntro" aria-haspopup="dialog"><img src="grafiki/ekim/ekim-avatar-480.webp" srcset="grafiki/ekim/ekim-avatar-480.webp 480w, grafiki/ekim/ekim-avatar-920.webp 920w" sizes="(max-width: 560px) 340px, (max-width: 800px) 45vw, 460px" width="480" height="480" fetchpriority="high" decoding="async" alt="Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami" data-i18n-alt="avatarAlt"><span class="avatar-play" aria-hidden="true">▶</span></button>
-            <div class="art-label" data-i18n="artLabel">ciekawość / buduj / powtarzaj</div>
+            <button class="avatar-trigger" type="button" aria-label="Play the ekim introduction" data-i18n-aria="playIntro" aria-haspopup="dialog"><img src="grafiki/ekim/ekim-avatar-480.webp" srcset="grafiki/ekim/ekim-avatar-480.webp 480w, grafiki/ekim/ekim-avatar-920.webp 920w" sizes="(max-width: 560px) 340px, (max-width: 800px) 45vw, 460px" width="480" height="480" fetchpriority="high" decoding="async" alt="The ekim avatar wearing a hood, with turquoise eyes and headphones" data-i18n-alt="avatarAlt"><span class="avatar-play" aria-hidden="true">▶</span></button>
+            <div class="art-label" data-i18n="artLabel">curiosity / build / repeat</div>
           </div>
         </div>
       </section>
 
       <section class="section" id="profil" aria-labelledby="profile-title">
         <div class="about wrap">
-          <div class="story-frame"><img src="grafiki/ekim/ekim-story-480.webp" srcset="grafiki/ekim/ekim-story-480.webp 480w, grafiki/ekim/ekim-story-800.webp 800w" sizes="(max-width: 560px) 366px, 480px" width="480" height="853" loading="lazy" decoding="async" alt="Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki" data-i18n-alt="storyAlt"></div>
+          <div class="story-frame"><img src="grafiki/ekim/ekim-story-480.webp" srcset="grafiki/ekim/ekim-story-480.webp 480w, grafiki/ekim/ekim-story-800.webp 800w" sizes="(max-width: 560px) 366px, 480px" width="480" height="853" loading="lazy" decoding="async" alt="ekim in a creative workshop filled with tools and electronics" data-i18n-alt="storyAlt"></div>
           <div class="about-copy">
-            <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="profileKicker">01 / Poznaj klimat</span></div>
-            <h2 id="profile-title"><span data-i18n="profileTitle1">Niech pomysł</span><br><span data-i18n="profileTitle2">zacznie działać.</span></h2>
-            <p class="lead" data-i18n="profileLead">ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.</p>
-            <p data-i18n="profileCopy">Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.</p>
+            <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="profileKicker">01 / The vibe</span></div>
+            <h2 id="profile-title"><span data-i18n="profileTitle1">Let an idea</span><br><span data-i18n="profileTitle2">come alive.</span></h2>
+            <p class="lead" data-i18n="profileLead">ekim is your guide to a digital workshop — a place where curiosity leads to the next experiment.</p>
+            <p data-i18n="profileCopy">The hood, turquoise eyes, and pink spark make the look instantly recognizable. In the background: code on a screen, tools on the table, and that moment when “what if…?” starts to become something real.</p>
             <div class="rule"></div>
-            <div class="small-note"><b>↳</b><span data-i18n="profileNote">Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.</span></div>
+            <div class="small-note"><b>↳</b><span data-i18n="profileNote">Come on in and make yourself at home. Ideas are here to be tested.</span></div>
             <div class="bio-box">
-              <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="bioHeading">O mnie</span></div>
-              <p data-i18n="bioPlaceholder">Ponad 15 lat praktyki w programowaniu, IT, infrastrukturze oraz architekturze oprogramowania i rozwiązań.</p>
+              <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="4"/><path d="M4 21v-2a8 8 0 0 1 16 0v2"/></svg><span data-i18n="bioHeading">About me</span></div>
+              <p data-i18n="bioPlaceholder">Over 15 years of hands-on experience in programming, IT, infrastructure, and software and solution architecture.</p>
             </div>
           </div>
         </div>
@@ -285,37 +277,37 @@
         <div class="wrap">
           <div class="workshop-head">
             <div>
-              <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a5 5 0 0 0-6.3 6.3L3 18a2.1 2.1 0 0 0 3 3l5.4-5.4a5 5 0 0 0 6.3-6.3l-3 3-3-3 3-3Z"/></svg><span data-i18n="workshopKicker">02 / Warsztat i pasje</span></div>
-              <h2 id="workshop-title"><span data-i18n="workshopTitle1">Kod, materia</span><br><span data-i18n="workshopTitle2">i dźwięk.</span></h2>
+              <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14.7 6.3a5 5 0 0 0-6.3 6.3L3 18a2.1 2.1 0 0 0 3 3l5.4-5.4a5 5 0 0 0 6.3-6.3l-3 3-3-3 3-3Z"/></svg><span data-i18n="workshopKicker">02 / Workshop and passions</span></div>
+              <h2 id="workshop-title"><span data-i18n="workshopTitle1">Code, matter</span><br><span data-i18n="workshopTitle2">and sound.</span></h2>
             </div>
-            <p data-i18n="workshopCopy">Łączę programowanie, tworzenie fizycznych rzeczy i muzykę. Automatyzuję procesy, drukuję w 3D i eksperymentuję z dźwiękiem. Korzystam z AI świadomie, czerpiąc z ponad 15 lat doświadczenia w IT i projektowaniu rozwiązań.</p>
+            <p data-i18n="workshopCopy">I bring together programming, making physical things, and music. I automate processes, print in 3D, and experiment with sound. I use AI thoughtfully, drawing on over 15 years of experience in IT and solution design.</p>
           </div>
           <div class="pillars">
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar1Label">01 — AUTOMATYZACJE</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="2" width="8" height="5" rx="1"/><rect x="2" y="17" width="7" height="5" rx="1"/><rect x="15" y="17" width="7" height="5" rx="1"/><path d="M12 7v5M5.5 17v-5h13v5"/></svg></div>
-              <h3 data-i18n="pillar1Title">Od pomysłu do procesu</h3>
-              <p data-i18n="pillar1Copy">Procesy biznesowe, wdrożenia i praca z AI.</p>
+              <div class="pillar-num"><span data-i18n="pillar1Label">01 — AUTOMATION</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="8" y="2" width="8" height="5" rx="1"/><rect x="2" y="17" width="7" height="5" rx="1"/><rect x="15" y="17" width="7" height="5" rx="1"/><path d="M12 7v5M5.5 17v-5h13v5"/></svg></div>
+              <h3 data-i18n="pillar1Title">From idea to workflow</h3>
+              <p data-i18n="pillar1Copy">Business processes, deployments, and working with AI.</p>
             </article>
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar2Label">02 — DRUK 3D I WARSZTAT</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5"/></svg></div>
-              <h3 data-i18n="pillar2Title">Pomysły nabierają kształtu</h3>
-              <p data-i18n="pillar2Copy">Prototypy, elektronika, części użytkowe i personalizacja.</p>
+              <div class="pillar-num"><span data-i18n="pillar2Label">02 — 3D PRINTING &amp; MAKING</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5"/></svg></div>
+              <h3 data-i18n="pillar2Title">Ideas take shape</h3>
+              <p data-i18n="pillar2Copy">Prototypes, electronics, functional parts, and personalization.</p>
             </article>
             <article class="pillar">
-              <div class="pillar-num"><span data-i18n="pillar3Label">03 — MUZYKA</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-3v13M9 9l12-3"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="18" cy="15" rx="3" ry="3"/></svg></div>
-              <h3 data-i18n="pillar3Title">W poszukiwaniu brzmienia</h3>
-              <p data-i18n="pillar3Copy">Produkcja, instrumenty i poszukiwanie własnego brzmienia.</p>
+              <div class="pillar-num"><span data-i18n="pillar3Label">03 — MUSIC</span><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-3v13M9 9l12-3"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="18" cy="15" rx="3" ry="3"/></svg></div>
+              <h3 data-i18n="pillar3Title">Exploring sound</h3>
+              <p data-i18n="pillar3Copy">Production, instruments, and finding my own sound.</p>
             </article>
           </div>
           <div class="resource-head">
-            <div><div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5m-5 6h5m12-6h5m-5 6h5"/><rect x="10" y="10" width="4" height="4"/></svg><span data-i18n="equipmentKicker">03 / Zaplecze</span></div><h3 data-i18n="equipmentTitle">Maszyny i technologie</h3></div>
-            <p data-i18n="equipmentCopy">Narzędzia, które pomagają mi przejść od kodu i projektu do fizycznych rzeczy oraz dźwięku.</p>
+            <div><div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5m-5 6h5m12-6h5m-5 6h5"/><rect x="10" y="10" width="4" height="4"/></svg><span data-i18n="equipmentKicker">03 / The setup</span></div><h3 data-i18n="equipmentTitle">Machines and technologies</h3></div>
+            <p data-i18n="equipmentCopy">Tools that help me turn code and designs into physical things and sound.</p>
           </div>
           <div class="resource-grid">
-<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5"/></svg><span data-i18n="machinesTitle">Maszyny</span></h4><ul class="tag-list"><li data-i18n="machine1">Snapmaker U1</li><li data-i18n="machine2">Anycubic Kobra S1 Combo</li><li data-i18n="machine3">Snapmaker Artisan 3w1</li><li data-i18n="machine4">Creality Otter</li><li data-i18n="machine5">InfiMech MX8 Pro (wkrótce)</li><li data-i18n="machine6">Anylaser X1 (wkrótce)</li></ul></article>
-<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 17 12-12 4 4L7 21H3v-4Zm10-10 4 4m2-2 2-2-4-4-2 2M3 3h6M3 3v6M3 6h3"/></svg><span data-i18n="designTitle">Projektowanie i wytwarzanie</span></h4><p class="resource-detail" data-i18n="cadTools">Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD</p><p class="resource-detail" data-i18n="slicerTools">Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next</p><p class="resource-detail" data-i18n="laserTools">Snapmaker Luban · Rayforge · LaserGRBL</p></article>
-<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 18"/></svg><span data-i18n="technologyTitle">Kod i infrastruktura</span></h4><ul class="tag-list"><li data-i18n="technology1">Web · mobile · backend</li><li data-i18n="technology2">Laravel · TypeScript</li><li data-i18n="technology3">Docker · Kubernetes · CI/CD</li><li data-i18n="technology4">ESP32 · Raspberry Pi</li></ul></article>
-<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-3v13M9 9l12-3"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="18" cy="15" rx="3" ry="3"/></svg><span data-i18n="musicTitle">Dźwięk i instrumenty</span></h4><p class="resource-detail" data-i18n="musicGear">Akai MPC, syntezatory, sekwencery i automaty perkusyjne, gitary, Tonex, NAM, Ableton, produkcja i nagrania.</p></article>
+<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5"/></svg><span data-i18n="machinesTitle">Machines</span></h4><ul class="tag-list"><li data-i18n="machine1">Snapmaker U1</li><li data-i18n="machine2">Anycubic Kobra S1 Combo</li><li data-i18n="machine3">Snapmaker Artisan 3-in-1</li><li data-i18n="machine4">Creality Otter</li><li data-i18n="machine5">InfiMech MX8 Pro (coming soon)</li><li data-i18n="machine6">Anylaser X1 (coming soon)</li></ul></article>
+<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m3 17 12-12 4 4L7 21H3v-4Zm10-10 4 4m2-2 2-2-4-4-2 2M3 3h6M3 3v6M3 6h3"/></svg><span data-i18n="designTitle">Design and fabrication</span></h4><p class="resource-detail" data-i18n="cadTools">Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD</p><p class="resource-detail" data-i18n="slicerTools">Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next</p><p class="resource-detail" data-i18n="laserTools">Snapmaker Luban · Rayforge · LaserGRBL</p></article>
+<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 18"/></svg><span data-i18n="technologyTitle">Code and infrastructure</span></h4><ul class="tag-list"><li data-i18n="technology1">Web · mobile · backend</li><li data-i18n="technology2">Laravel · TypeScript</li><li data-i18n="technology3">Docker · Kubernetes · CI/CD</li><li data-i18n="technology4">ESP32 · Raspberry Pi</li></ul></article>
+<article class="resource-card"><h4><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M9 18V5l12-3v13M9 9l12-3"/><ellipse cx="6" cy="18" rx="3" ry="3"/><ellipse cx="18" cy="15" rx="3" ry="3"/></svg><span data-i18n="musicTitle">Sound and instruments</span></h4><p class="resource-detail" data-i18n="musicGear">Akai MPC, synthesizers, sequencers and drum machines, guitars, Tonex, NAM, Ableton, production and recording.</p></article>
 </div>
         </div>
       </section>
@@ -323,273 +315,58 @@
       <section class="section projects" id="projekty" aria-labelledby="projects-title">
         <div class="wrap">
           <div class="workshop-head">
-            <div><div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m9 11-3 3 3 3m6-6 3 3-3 3"/></svg><span data-i18n="projectsKicker">04 / Rzeczy w budowie</span></div><h2 id="projects-title" data-i18n="projectsTitle">Projekty</h2></div>
-            <p data-i18n="projectsCopy">Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.</p>
+            <div><div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"/><path d="m9 11-3 3 3 3m6-6 3 3-3 3"/></svg><span data-i18n="projectsKicker">04 / In progress</span></div><h2 id="projects-title" data-i18n="projectsTitle">Projects</h2></div>
+            <p data-i18n="projectsCopy">Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.</p>
           </div>
           <div class="project-grid">
             <article class="project-card">
-              <div class="project-header"><img class="project-icon" src="grafiki/projekty/fm1-flasher.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project1Category">Aplikacja Android</span></div>
+              <div class="project-header"><img class="project-icon" src="grafiki/projekty/fm1-flasher.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project1Category">Android app</span></div>
               <h3 data-i18n="project1Title">Android FM1 Flasher</h3>
-              <p data-i18n="project1Copy">Aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.</p>
-              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagMusic">Muzyka</li><li>Android</li><li>Kotlin</li><li>USB MIDI</li></ul>
-              <div class="project-links"><a href="https://github.com/ekim-pl/android-fm1-flasher">GitHub ↗</a><a href="https://ekim-pl.github.io/android-fm1-flasher/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
+              <p data-i18n="project1Copy">An Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.</p>
+              <ul class="tag-list project-tags" aria-label="Categories and technologies" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagMusic">Music</li><li>Android</li><li>Kotlin</li><li>USB MIDI</li></ul>
+              <div class="project-links"><a href="https://github.com/ekim-pl/android-fm1-flasher">GitHub ↗</a><a href="https://ekim-pl.github.io/android-fm1-flasher/"><span data-i18n="projectWebsite">Project site</span> ↗</a></div>
             </article>
             <article class="project-card">
-              <div class="project-header"><div class="project-symbol"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v16M5 8h4m-4 4h4m6-4h4m-4 4h4"/></svg></div><span class="project-type" data-i18n="project3Category">Katalog społecznościowy</span></div>
+              <div class="project-header"><div class="project-symbol"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v16M5 8h4m-4 4h4m6-4h4m-4 4h4"/></svg></div><span class="project-type" data-i18n="project3Category">Community directory</span></div>
               <h3 data-i18n="project3Title">Awesome FM-1</h3>
-              <p data-i18n="project3Copy">Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu.</p>
-              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagFirmwareDirectory">Katalog firmware</li><li>Python</li><li>JSON</li></ul>
+              <p data-i18n="project3Copy">A community-maintained firmware directory for the M-VAVE FM-1. Projects, original publisher links, and release information in one place.</p>
+              <ul class="tag-list project-tags" aria-label="Categories and technologies" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagFirmwareDirectory">Firmware directory</li><li>Python</li><li>JSON</li></ul>
               <div class="project-links"><a href="https://github.com/ekim-pl/awesome-fm1">GitHub ↗</a></div>
             </article>
             <article class="project-card">
               <div class="project-header"><img class="project-icon" src="grafiki/projekty/pxv.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project2Category">CLI / MCP · GrapheneOS</span></div>
               <h3 data-i18n="project2Title">PXV</h3>
-              <p data-i18n="project2Copy">Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.</p>
-              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagAutomation">Automatyzacja</li><li>TypeScript</li><li>GrapheneOS</li><li>CLI</li><li>MCP</li></ul>
-              <div class="project-links"><a href="https://github.com/ekim-pl/pxv">GitHub ↗</a><a href="https://ekim-pl.github.io/pxv/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
+              <p data-i18n="project2Copy">A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.</p>
+              <ul class="tag-list project-tags" aria-label="Categories and technologies" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagAutomation">Automation</li><li>TypeScript</li><li>GrapheneOS</li><li>CLI</li><li>MCP</li></ul>
+              <div class="project-links"><a href="https://github.com/ekim-pl/pxv">GitHub ↗</a><a href="https://ekim-pl.github.io/pxv/"><span data-i18n="projectWebsite">Project site</span> ↗</a></div>
             </article>
           </div>
         </div>
       </section>
 
-      <section class="banner" aria-label="ekim w swoim warsztacie" data-i18n-aria="bannerLabel">
-        <img src="grafiki/ekim/ekim-cover-1080.webp" srcset="grafiki/ekim/ekim-cover-1080.webp 1080w, grafiki/ekim/ekim-cover-1920.webp 1920w" sizes="100vw" width="1080" height="360" loading="lazy" decoding="async" alt="ekim pracuje nad małym elektronicznym projektem w warsztacie" data-i18n-alt="bannerAlt">
-        <div class="banner-caption"><p data-i18n="bannerCaption">Pomyśl · zbuduj · ulepsz</p></div>
+      <section class="banner" aria-label="ekim in the workshop" data-i18n-aria="bannerLabel">
+        <img src="grafiki/ekim/ekim-cover-1080.webp" srcset="grafiki/ekim/ekim-cover-1080.webp 1080w, grafiki/ekim/ekim-cover-1920.webp 1920w" sizes="100vw" width="1080" height="360" loading="lazy" decoding="async" alt="ekim working on a small electronic project in the workshop" data-i18n-alt="bannerAlt">
+        <div class="banner-caption"><p data-i18n="bannerCaption">Think it · make it · make it better</p></div>
       </section>
 
       <section class="closing" id="koniec" aria-labelledby="closing-title">
         <div class="wrap">
-          <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5c3-3 7-2 7-2s1 4-2 7l-7 7-5-5 7-7Z"/><circle cx="16" cy="8" r="1.5"/><path d="m7 12-4 1 1-5 6-1m2 10-1 4 5-1 1-6M6 16c-3 0-3 5-3 5s5 0 5-3"/></svg><span data-i18n="closingKicker">05 / Ciąg dalszy nastąpi</span></div>
-          <h2 id="closing-title"><span data-i18n="closingTitle1">Warsztat jest otwarty.</span><br><span data-i18n="closingTitle2">Co zbudujemy w głowie?</span></h2>
-          <p data-i18n="closingCopy">To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.</p>
+          <div class="section-kicker"><svg class="ui-icon " xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M14 5c3-3 7-2 7-2s1 4-2 7l-7 7-5-5 7-7Z"/><circle cx="16" cy="8" r="1.5"/><path d="m7 12-4 1 1-5 6-1m2 10-1 4 5-1 1-6M6 16c-3 0-3 5-3 5s5 0 5-3"/></svg><span data-i18n="closingKicker">05 / To be continued</span></div>
+          <h2 id="closing-title"><span data-i18n="closingTitle1">The workshop is open.</span><br><span data-i18n="closingTitle2">What will you dream up?</span></h2>
+          <p data-i18n="closingCopy">This is just the beginning. Stay a while — you might find your next idea right here.</p>
         </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer-inner wrap"><a href="#start" aria-label="Wróć na początek" data-i18n-aria="backToTop"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a><span data-i18n="footerText">Cyfrowy warsztat ekim</span><nav class="social-links" aria-label="Profile społecznościowe" data-i18n-aria="socialLabel"><a href="https://www.instagram.com/ekimpl/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.youtube.com/@ekim-pl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg><span>YouTube</span></a><a href="https://cults3d.com/en/users/ekimpl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10"/></svg><span>Cults3D</span></a></nav><span>© 2026</span></div>
+      <div class="footer-inner wrap"><a href="#start" aria-label="Back to top" data-i18n-aria="backToTop"><img src="grafiki/ekim/ekim-logo-320.webp" width="320" height="128" decoding="async" alt="ekim"></a><span data-i18n="footerText">ekim digital workshop</span><nav class="social-links" aria-label="Social profiles" data-i18n-aria="socialLabel"><a href="https://www.instagram.com/ekimpl/"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor" stroke="none"/></svg><span>Instagram</span></a><a href="https://www.youtube.com/@ekim-pl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="5" width="20" height="14" rx="4"/><path d="m10 9 5 3-5 3Z"/></svg><span>YouTube</span></a><a href="https://cults3d.com/en/users/ekimpl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z"/><path d="m3 7 9 5 9-5m-9 5v10"/></svg><span>Cults3D</span></a><button class="discord-contact" type="button" aria-label="Copy Discord username: ekim_pl" data-copied="Copied: ekim_pl" data-copy-fallback="Copy manually: ekim_pl"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M7 5a19 19 0 0 1 10 0l1-2m-11 2L6 3M7 5C4 6 2 11 2 17l5 3 2-3m8-12c3 1 5 6 5 12l-5 3-2-3M6 16a15 15 0 0 0 12 0"/><circle cx="8" cy="12" r="1"/><circle cx="16" cy="12" r="1"/></svg><span>Discord · ekim_pl</span></button><span class="sr-only" id="discord-status" role="status"></span></nav><span>© 2026</span></div>
     </footer>
     <dialog class="intro-dialog" id="intro-dialog" aria-labelledby="intro-title">
-      <h2 class="sr-only" id="intro-title" data-i18n="introTitle">Poznaj ekim — film</h2>
-      <button class="intro-close" type="button" aria-label="Zamknij film" data-i18n-aria="closeIntro" autofocus>×</button>
+      <h2 class="sr-only" id="intro-title" data-i18n="introTitle">Meet ekim — video</h2>
+      <button class="intro-close" type="button" aria-label="Close video" data-i18n-aria="closeIntro" autofocus>×</button>
       <video class="intro-video" id="intro-video" controls playsinline preload="none"></video>
-      <p class="intro-message" id="intro-message" role="status" hidden></p>
+      <p class="intro-message" id="intro-message" data-play-hint="Press the play button to start the video." data-error="The video could not be loaded. Close this window and try again." role="status" hidden></p>
     </dialog>
     <script>
-      const translations = {
-  "pl": {
-    "pageTitle": "ekim — cyfrowy warsztat",
-    "pageDescription": "Poznaj ekim — cyfrowy warsztat pełen kodu, eksperymentów i nowych pomysłów.",
-    "navLabel": "Nawigacja główna",
-    "homeLabel": "ekim — strona główna",
-    "languageLabel": "Wybierz język",
-    "navProfile": "Profil",
-    "navWorkshop": "Warsztat",
-    "navProjects": "Projekty",
-    "navMeet": "Poznaj ekim",
-    "heroEyebrow": "Cyfrowy warsztat · ekim",
-    "heroGreeting": "Cześć,",
-    "heroIntro": "tu",
-    "heroCopy": "Miejsce, w którym kod spotyka się z wyobraźnią, a dobre pomysły dostają przestrzeń, by nabrać kształtu.",
-    "heroButton": "Zajrzyj do środka",
-    "heroLink": "Odkryj warsztat",
-    "avatarAlt": "Awatar ekim w kapturze, z turkusowymi oczami i słuchawkami",
-    "artLabel": "ciekawość / buduj / powtarzaj",
-    "profileKicker": "01 / Poznaj klimat",
-    "profileTitle1": "Niech pomysł",
-    "profileTitle2": "zacznie działać.",
-    "profileLead": "ekim to przewodnik po cyfrowym warsztacie — miejscu, gdzie ciekawość prowadzi do kolejnego eksperymentu.",
-    "profileCopy": "Kaptur, turkusowe spojrzenie i różowa iskra tworzą jego znak rozpoznawczy. W tle: kod na ekranie, narzędzia na stole i ta chwila, kiedy „a co, jeśli…?” zmienia się w coś namacalnego.",
-    "profileNote": "Wchodzisz do środka? Rozgość się. Tutaj pomysły są po to, żeby je sprawdzać.",
-    "storyAlt": "Postać ekim w kreatywnym warsztacie pełnym narzędzi i elektroniki",
-    "bioHeading": "O mnie",
-    "bioPlaceholder": "Ponad 15 lat praktyki w programowaniu, IT, infrastrukturze oraz architekturze oprogramowania i rozwiązań.",
-    "workshopKicker": "02 / Warsztat i pasje",
-    "workshopTitle1": "Kod, materia",
-    "workshopTitle2": "i dźwięk.",
-    "workshopCopy": "Łączę programowanie, tworzenie fizycznych rzeczy i muzykę. Automatyzuję procesy, drukuję w 3D i eksperymentuję z dźwiękiem. Korzystam z AI świadomie, czerpiąc z ponad 15 lat doświadczenia w IT i projektowaniu rozwiązań.",
-    "pillar1Label": "01 — AUTOMATYZACJE",
-    "pillar1Title": "Od pomysłu do procesu",
-    "pillar1Copy": "Procesy biznesowe, wdrożenia i praca z AI.",
-    "pillar2Label": "02 — DRUK 3D I WARSZTAT",
-    "pillar2Title": "Pomysły nabierają kształtu",
-    "pillar2Copy": "Prototypy, elektronika, części użytkowe i personalizacja.",
-    "pillar3Label": "03 — MUZYKA",
-    "pillar3Title": "W poszukiwaniu brzmienia",
-    "pillar3Copy": "Produkcja, instrumenty i poszukiwanie własnego brzmienia.",
-    "equipmentKicker": "03 / Zaplecze",
-    "equipmentTitle": "Maszyny i technologie",
-    "equipmentCopy": "Narzędzia, które pomagają mi przejść od kodu i projektu do fizycznych rzeczy oraz dźwięku.",
-    "machinesTitle": "Maszyny",
-    "machine1": "Snapmaker U1",
-    "machine2": "Anycubic Kobra S1 Combo",
-    "machine3": "Snapmaker Artisan 3w1",
-    "technologyTitle": "Kod i infrastruktura",
-    "technology1": "Web · mobile · backend",
-    "technology2": "Laravel · TypeScript",
-    "technology3": "Docker · Kubernetes · CI/CD",
-    "projectsKicker": "04 / Rzeczy w budowie",
-    "projectsTitle": "Projekty",
-    "projectsCopy": "Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.",
-    "project1Title": "Android FM1 Flasher",
-    "project1Category": "Aplikacja Android",
-    "project1Copy": "Aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.",
-    "project2Title": "PXV",
-    "project2Category": "CLI / MCP · GrapheneOS",
-    "project2Copy": "Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.",
-    "projectWebsite": "Strona projektu",
-    "project3Title": "Awesome FM-1",
-    "bannerLabel": "ekim w swoim warsztacie",
-    "bannerAlt": "ekim pracuje nad małym elektronicznym projektem w warsztacie",
-    "bannerCaption": "Pomyśl · zbuduj · ulepsz",
-    "closingKicker": "05 / Ciąg dalszy nastąpi",
-    "closingTitle1": "Warsztat jest otwarty.",
-    "closingTitle2": "Co zbudujemy w głowie?",
-    "closingCopy": "To dopiero początek. Zostań na chwilę — może właśnie tu wpadniesz na swój następny pomysł.",
-    "backToTop": "Wróć na początek",
-    "footerText": "Cyfrowy warsztat ekim",
-    "machine4": "Creality Otter",
-    "machine5": "InfiMech MX8 Pro (wkrótce)",
-    "machine6": "Anylaser X1 (wkrótce)",
-    "designTitle": "Projektowanie i wytwarzanie",
-    "cadTools": "Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD",
-    "slicerTools": "Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next",
-    "laserTools": "Snapmaker Luban · Rayforge · LaserGRBL",
-    "technology4": "ESP32 · Raspberry Pi",
-    "musicTitle": "Dźwięk i instrumenty",
-    "musicGear": "Akai MPC, syntezatory, sekwencery i automaty perkusyjne, gitary, Tonex, NAM, Ableton, produkcja i nagrania.",
-    "socialLabel": "Profile społecznościowe",
-    "playIntro": "Odtwórz film o ekim",
-    "closeIntro": "Zamknij film",
-    "introTitle": "Poznaj ekim — film",
-    "introError": "Nie udało się wczytać filmu. Zamknij okno i spróbuj ponownie.",
-    "introPlayHint": "Naciśnij przycisk odtwarzania, aby uruchomić film.",
-    "project3Category": "Katalog społecznościowy",
-    "project3Copy": "Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu.",
-    "projectTagsLabel": "Kategorie i technologie",
-    "tagMusic": "Muzyka",
-    "tagFirmwareDirectory": "Katalog firmware",
-    "tagAutomation": "Automatyzacja"
-  },
-  "en": {
-    "pageTitle": "ekim — digital workshop",
-    "pageDescription": "Meet ekim — a digital workshop full of code, experiments, and new ideas.",
-    "navLabel": "Main navigation",
-    "homeLabel": "ekim — home",
-    "languageLabel": "Choose language",
-    "navProfile": "Profile",
-    "navWorkshop": "Workshop",
-    "navProjects": "Projects",
-    "navMeet": "Meet ekim",
-    "heroEyebrow": "Digital workshop · ekim",
-    "heroGreeting": "Hello,",
-    "heroIntro": "I'm",
-    "heroCopy": "A place where code meets imagination and good ideas get the space to take shape.",
-    "heroButton": "Step inside",
-    "heroLink": "Explore the workshop",
-    "avatarAlt": "The ekim avatar wearing a hood, with turquoise eyes and headphones",
-    "artLabel": "curiosity / build / repeat",
-    "profileKicker": "01 / The vibe",
-    "profileTitle1": "Let an idea",
-    "profileTitle2": "come alive.",
-    "profileLead": "ekim is your guide to a digital workshop — a place where curiosity leads to the next experiment.",
-    "profileCopy": "The hood, turquoise eyes, and pink spark make the look instantly recognizable. In the background: code on a screen, tools on the table, and that moment when “what if…?” starts to become something real.",
-    "profileNote": "Come on in and make yourself at home. Ideas are here to be tested.",
-    "storyAlt": "ekim in a creative workshop filled with tools and electronics",
-    "bioHeading": "About me",
-    "bioPlaceholder": "Over 15 years of hands-on experience in programming, IT, infrastructure, and software and solution architecture.",
-    "workshopKicker": "02 / Workshop and passions",
-    "workshopTitle1": "Code, matter",
-    "workshopTitle2": "and sound.",
-    "workshopCopy": "I bring together programming, making physical things, and music. I automate processes, print in 3D, and experiment with sound. I use AI thoughtfully, drawing on over 15 years of experience in IT and solution design.",
-    "pillar1Label": "01 — AUTOMATION",
-    "pillar1Title": "From idea to workflow",
-    "pillar1Copy": "Business processes, deployments, and working with AI.",
-    "pillar2Label": "02 — 3D PRINTING & MAKING",
-    "pillar2Title": "Ideas take shape",
-    "pillar2Copy": "Prototypes, electronics, functional parts, and personalization.",
-    "pillar3Label": "03 — MUSIC",
-    "pillar3Title": "Exploring sound",
-    "pillar3Copy": "Production, instruments, and finding my own sound.",
-    "equipmentKicker": "03 / The setup",
-    "equipmentTitle": "Machines and technologies",
-    "equipmentCopy": "Tools that help me turn code and designs into physical things and sound.",
-    "machinesTitle": "Machines",
-    "machine1": "Snapmaker U1",
-    "machine2": "Anycubic Kobra S1 Combo",
-    "machine3": "Snapmaker Artisan 3-in-1",
-    "technologyTitle": "Code and infrastructure",
-    "technology1": "Web · mobile · backend",
-    "technology2": "Laravel · TypeScript",
-    "technology3": "Docker · Kubernetes · CI/CD",
-    "projectsKicker": "04 / In progress",
-    "projectsTitle": "Projects",
-    "projectsCopy": "Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.",
-    "project1Title": "Android FM1 Flasher",
-    "project1Category": "Android app",
-    "project1Copy": "An Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.",
-    "project2Title": "PXV",
-    "project2Category": "CLI / MCP · GrapheneOS",
-    "project2Copy": "A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.",
-    "projectWebsite": "Project site",
-    "project3Title": "Awesome FM-1",
-    "bannerLabel": "ekim in the workshop",
-    "bannerAlt": "ekim working on a small electronic project in the workshop",
-    "bannerCaption": "Think it · make it · make it better",
-    "closingKicker": "05 / To be continued",
-    "closingTitle1": "The workshop is open.",
-    "closingTitle2": "What will you dream up?",
-    "closingCopy": "This is just the beginning. Stay a while — you might find your next idea right here.",
-    "backToTop": "Back to top",
-    "footerText": "ekim digital workshop",
-    "machine4": "Creality Otter",
-    "machine5": "InfiMech MX8 Pro (coming soon)",
-    "machine6": "Anylaser X1 (coming soon)",
-    "designTitle": "Design and fabrication",
-    "cadTools": "Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD",
-    "slicerTools": "Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next",
-    "laserTools": "Snapmaker Luban · Rayforge · LaserGRBL",
-    "technology4": "ESP32 · Raspberry Pi",
-    "musicTitle": "Sound and instruments",
-    "musicGear": "Akai MPC, synthesizers, sequencers and drum machines, guitars, Tonex, NAM, Ableton, production and recording.",
-    "socialLabel": "Social profiles",
-    "playIntro": "Play the ekim introduction",
-    "closeIntro": "Close video",
-    "introTitle": "Meet ekim — video",
-    "introError": "The video could not be loaded. Close this window and try again.",
-    "introPlayHint": "Press the play button to start the video.",
-    "project3Category": "Community directory",
-    "project3Copy": "A community-maintained firmware directory for the M-VAVE FM-1. Projects, original publisher links, and release information in one place.",
-    "projectTagsLabel": "Categories and technologies",
-    "tagMusic": "Music",
-    "tagFirmwareDirectory": "Firmware directory",
-    "tagAutomation": "Automation"
-  }
-};
-
-      function setLanguage(language) {
-        const copy = translations[language];
-        document.documentElement.lang = language;
-        document.documentElement.dataset.lang = language;
-        document.title = copy.pageTitle;
-        document.querySelector("[data-page-description]").content = copy.pageDescription;
-        document.querySelectorAll("[data-i18n]").forEach((element) => {
-          element.textContent = copy[element.dataset.i18n];
-        });
-        document.querySelectorAll("[data-i18n-alt]").forEach((element) => {
-          element.alt = copy[element.dataset.i18nAlt];
-        });
-        document.querySelectorAll("[data-i18n-aria]").forEach((element) => {
-          element.setAttribute("aria-label", copy[element.dataset.i18nAria]);
-        });
-        document.querySelectorAll("[data-lang]").forEach((button) => {
-          button.setAttribute("aria-pressed", String(button.dataset.lang === language));
-        });
-      }
-
-      document.querySelectorAll("[data-lang]").forEach((button) => {
-        button.addEventListener("click", () => setLanguage(button.dataset.lang));
-      });
-
       const introDialog = document.getElementById("intro-dialog");
       const introVideo = document.getElementById("intro-video");
       const introMessage = document.getElementById("intro-message");
@@ -599,7 +376,7 @@
         introDialog.showModal();
         introVideo.play().catch(() => {
           if (!introDialog.open) return;
-          introMessage.textContent = translations[document.documentElement.lang].introPlayHint;
+          introMessage.textContent = introMessage.dataset.playHint;
           introMessage.hidden = false;
         });
       });
@@ -615,8 +392,20 @@
       });
       introVideo.addEventListener("error", () => {
         if (!introDialog.open) return;
-        introMessage.textContent = translations[document.documentElement.lang].introError;
+        introMessage.textContent = introMessage.dataset.error;
         introMessage.hidden = false;
+      });
+
+      const discordContact = document.querySelector(".discord-contact");
+      const discordStatus = document.getElementById("discord-status");
+      discordContact.addEventListener("click", async () => {
+        try {
+          await navigator.clipboard.writeText("ekim_pl");
+          discordStatus.textContent = discordContact.dataset.copied;
+        } catch {
+          discordStatus.textContent = discordContact.dataset.copyFallback;
+        }
+        discordContact.querySelector("span").textContent = discordStatus.textContent;
       });
     </script>
   </body>
