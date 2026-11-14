@@ -145,6 +145,9 @@
       .project-icon { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; }
       .project-card h3 { margin: 26px 0 9px; font-size: 18px; }
       .project-card p { margin: 0; color: var(--muted); font-size: 13px; }
+      .project-tags { margin-top: 18px; gap: 6px; }
+      .project-tags li { padding: 4px 8px; font-size: 10px; }
+      .project-tags .tag-category { border-color: rgba(239,22,141,.28); background: rgba(239,22,141,.05); color: #ef8abb; }
       .project-links { display: flex; gap: 8px; margin-top: auto; padding-top: 20px; }
       .project-links a, .project-links > span { padding: 7px 9px; border: 1px solid var(--line); border-radius: 2px; color: #a3a6b2; font-size: 10px; }
       .project-links span[aria-disabled="true"] { opacity: .6; }
@@ -325,21 +328,24 @@
           </div>
           <div class="project-grid">
             <article class="project-card">
-              <div class="project-header"><img class="project-icon" src="grafiki/projekty/fm1-flasher.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project1Category">Eksperymentalna aplikacja Android</span></div>
+              <div class="project-header"><img class="project-icon" src="grafiki/projekty/fm1-flasher.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project1Category">Aplikacja Android</span></div>
               <h3 data-i18n="project1Title">Android FM1 Flasher</h3>
-              <p data-i18n="project1Copy">Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.</p>
+              <p data-i18n="project1Copy">Aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.</p>
+              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagMusic">Muzyka</li><li>Android</li><li>Kotlin</li><li>USB MIDI</li></ul>
               <div class="project-links"><a href="https://github.com/ekim-pl/android-fm1-flasher">GitHub ↗</a><a href="https://ekim-pl.github.io/android-fm1-flasher/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
             </article>
             <article class="project-card">
               <div class="project-header"><div class="project-symbol"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v16M5 8h4m-4 4h4m6-4h4m-4 4h4"/></svg></div><span class="project-type" data-i18n="project3Category">Katalog społecznościowy</span></div>
               <h3 data-i18n="project3Title">Awesome FM-1</h3>
               <p data-i18n="project3Copy">Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu.</p>
+              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagFirmwareDirectory">Katalog firmware</li><li>Python</li><li>JSON</li></ul>
               <div class="project-links"><a href="https://github.com/ekim-pl/awesome-fm1">GitHub ↗</a></div>
             </article>
             <article class="project-card">
               <div class="project-header"><img class="project-icon" src="grafiki/projekty/pxv.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project2Category">CLI / MCP · GrapheneOS</span></div>
               <h3 data-i18n="project2Title">PXV</h3>
               <p data-i18n="project2Copy">Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.</p>
+              <ul class="tag-list project-tags" aria-label="Kategorie i technologie" data-i18n-aria="projectTagsLabel"><li class="tag-category" data-i18n="tagAutomation">Automatyzacja</li><li>TypeScript</li><li>GrapheneOS</li><li>CLI</li><li>MCP</li></ul>
               <div class="project-links"><a href="https://github.com/ekim-pl/pxv">GitHub ↗</a><a href="https://ekim-pl.github.io/pxv/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
             </article>
           </div>
@@ -425,8 +431,8 @@
     "projectsTitle": "Projekty",
     "projectsCopy": "Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.",
     "project1Title": "Android FM1 Flasher",
-    "project1Category": "Eksperymentalna aplikacja Android",
-    "project1Copy": "Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.",
+    "project1Category": "Aplikacja Android",
+    "project1Copy": "Aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.",
     "project2Title": "PXV",
     "project2Category": "CLI / MCP · GrapheneOS",
     "project2Copy": "Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.",
@@ -458,7 +464,11 @@
     "introError": "Nie udało się wczytać filmu. Zamknij okno i spróbuj ponownie.",
     "introPlayHint": "Naciśnij przycisk odtwarzania, aby uruchomić film.",
     "project3Category": "Katalog społecznościowy",
-    "project3Copy": "Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu."
+    "project3Copy": "Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu.",
+    "projectTagsLabel": "Kategorie i technologie",
+    "tagMusic": "Muzyka",
+    "tagFirmwareDirectory": "Katalog firmware",
+    "tagAutomation": "Automatyzacja"
   },
   "en": {
     "pageTitle": "ekim — digital workshop",
@@ -515,8 +525,8 @@
     "projectsTitle": "Projects",
     "projectsCopy": "Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.",
     "project1Title": "Android FM1 Flasher",
-    "project1Category": "Experimental Android app",
-    "project1Copy": "An experimental Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.",
+    "project1Category": "Android app",
+    "project1Copy": "An Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.",
     "project2Title": "PXV",
     "project2Category": "CLI / MCP · GrapheneOS",
     "project2Copy": "A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.",
@@ -548,7 +558,11 @@
     "introError": "The video could not be loaded. Close this window and try again.",
     "introPlayHint": "Press the play button to start the video.",
     "project3Category": "Community directory",
-    "project3Copy": "A community-maintained firmware directory for the M-VAVE FM-1. Projects, original publisher links, and release information in one place."
+    "project3Copy": "A community-maintained firmware directory for the M-VAVE FM-1. Projects, original publisher links, and release information in one place.",
+    "projectTagsLabel": "Categories and technologies",
+    "tagMusic": "Music",
+    "tagFirmwareDirectory": "Firmware directory",
+    "tagAutomation": "Automation"
   }
 };
 
