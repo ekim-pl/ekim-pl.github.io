@@ -50,8 +50,8 @@
       .pillar-num .ui-icon { color: var(--pink); }
       .resource-card h4 { display: flex; align-items: center; gap: 10px; }
       .resource-card h4 .ui-icon { color: var(--cyan); }
-      .project-soon-icon { display: grid; place-items: center; flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; color: var(--cyan); background: rgba(39,229,242,.06); }
-      .project-soon-icon .ui-icon { width: 30px; height: 30px; }
+      .project-symbol { display: grid; place-items: center; flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; color: var(--cyan); background: rgba(39,229,242,.06); }
+      .project-symbol .ui-icon { width: 30px; height: 30px; }
       .hero {
         position: relative;
         min-height: 790px;
@@ -337,9 +337,10 @@
               <div class="project-links"><a href="https://github.com/ekim-pl/pxv">GitHub ↗</a><a href="https://ekim-pl.github.io/pxv/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
             </article>
             <article class="project-card">
-              <div class="project-header"><div class="project-soon-icon"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5L12 3Z"/></svg></div><span class="project-type" data-i18n="projectSlot">Na warsztacie</span></div>
-              <h3 data-i18n="project3Title">Już wkrótce</h3>
-              <p data-i18n="projectPlaceholder">Kolejna iskra już padła. Teraz pora zamienić ją w coś, co działa.</p>
+              <div class="project-header"><div class="project-symbol"><svg class="ui-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M12 5C9 3 5 3 2 4v16c3-1 7-1 10 1 3-2 7-2 10-1V4c-3-1-7-1-10 1Zm0 0v16M5 8h4m-4 4h4m6-4h4m-4 4h4"/></svg></div><span class="project-type" data-i18n="project3Category">Katalog społecznościowy</span></div>
+              <h3 data-i18n="project3Title">Awesome FM-1</h3>
+              <p data-i18n="project3Copy">Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu.</p>
+              <div class="project-links"><a href="https://github.com/ekim-pl/awesome-fm1">GitHub ↗</a></div>
             </article>
           </div>
         </div>
@@ -423,7 +424,6 @@
     "projectsKicker": "04 / Rzeczy w budowie",
     "projectsTitle": "Projekty",
     "projectsCopy": "Przeglądaj projekty z warsztatu — od aplikacji Android po narzędzia do przygotowywania urządzeń. Zajrzyj do kodu i dokumentacji.",
-    "projectSlot": "Na warsztacie",
     "project1Title": "Android FM1 Flasher",
     "project1Category": "Eksperymentalna aplikacja Android",
     "project1Copy": "Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.",
@@ -431,8 +431,7 @@
     "project2Category": "CLI / MCP · GrapheneOS",
     "project2Copy": "Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.",
     "projectWebsite": "Strona projektu",
-    "project3Title": "Już wkrótce",
-    "projectPlaceholder": "Kolejna iskra już padła. Teraz pora zamienić ją w coś, co działa.",
+    "project3Title": "Awesome FM-1",
     "bannerLabel": "ekim w swoim warsztacie",
     "bannerAlt": "ekim pracuje nad małym elektronicznym projektem w warsztacie",
     "bannerCaption": "Pomyśl · zbuduj · ulepsz",
@@ -457,7 +456,9 @@
     "closeIntro": "Zamknij film",
     "introTitle": "Poznaj ekim — film",
     "introError": "Nie udało się wczytać filmu. Zamknij okno i spróbuj ponownie.",
-    "introPlayHint": "Naciśnij przycisk odtwarzania, aby uruchomić film."
+    "introPlayHint": "Naciśnij przycisk odtwarzania, aby uruchomić film.",
+    "project3Category": "Katalog społecznościowy",
+    "project3Copy": "Społecznościowy katalog firmware’u dla M-VAVE FM-1. Projekty, źródła autorów i informacje o wydaniach w jednym miejscu."
   },
   "en": {
     "pageTitle": "ekim — digital workshop",
@@ -513,7 +514,6 @@
     "projectsKicker": "04 / In progress",
     "projectsTitle": "Projects",
     "projectsCopy": "Explore workshop projects — from Android apps to device preparation tools. Browse the source code and documentation.",
-    "projectSlot": "On the workbench",
     "project1Title": "Android FM1 Flasher",
     "project1Category": "Experimental Android app",
     "project1Copy": "An experimental Android app for browsing firmware and updating the M-VAVE FM-1 over USB MIDI.",
@@ -521,8 +521,7 @@
     "project2Category": "CLI / MCP · GrapheneOS",
     "project2Copy": "A local CLI and MCP toolkit for preparing Google Pixel phones with GrapheneOS, user profiles, and selected apps.",
     "projectWebsite": "Project site",
-    "project3Title": "Coming soon",
-    "projectPlaceholder": "The next spark has landed. Time to turn it into something that works.",
+    "project3Title": "Awesome FM-1",
     "bannerLabel": "ekim in the workshop",
     "bannerAlt": "ekim working on a small electronic project in the workshop",
     "bannerCaption": "Think it · make it · make it better",
@@ -547,7 +546,9 @@
     "closeIntro": "Close video",
     "introTitle": "Meet ekim — video",
     "introError": "The video could not be loaded. Close this window and try again.",
-    "introPlayHint": "Press the play button to start the video."
+    "introPlayHint": "Press the play button to start the video.",
+    "project3Category": "Community directory",
+    "project3Copy": "A community-maintained firmware directory for the M-VAVE FM-1. Projects, original publisher links, and release information in one place."
   }
 };
 
