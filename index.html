@@ -108,6 +108,8 @@
       .project-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
       .project-card { display: flex; flex-direction: column; min-height: 235px; padding: 24px; border: 1px solid var(--line); background: linear-gradient(145deg, rgba(255,255,255,.035), rgba(255,255,255,.012)); }
       .project-card .project-type { color: var(--pink); font: 700 10px ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; }
+      .project-header { display: flex; align-items: center; gap: 12px; min-height: 56px; }
+      .project-icon { flex: 0 0 56px; width: 56px; height: 56px; border-radius: 12px; }
       .project-card h3 { margin: 26px 0 9px; font-size: 18px; }
       .project-card p { margin: 0; color: var(--muted); font-size: 13px; }
       .project-links { display: flex; gap: 8px; margin-top: auto; padding-top: 20px; }
@@ -285,19 +287,19 @@
           </div>
           <div class="project-grid">
             <article class="project-card">
-              <span class="project-type" data-i18n="project1Category">Eksperymentalna aplikacja Android</span>
+              <div class="project-header"><img class="project-icon" src="grafiki/projekty/fm1-flasher.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project1Category">Eksperymentalna aplikacja Android</span></div>
               <h3 data-i18n="project1Title">Android FM1 Flasher</h3>
               <p data-i18n="project1Copy">Eksperymentalna aplikacja do przeglądania firmware’u i aktualizacji M-VAVE FM-1 przez USB MIDI.</p>
               <div class="project-links"><a href="https://github.com/ekim-pl/android-fm1-flasher">GitHub ↗</a><a href="https://ekim-pl.github.io/android-fm1-flasher/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
             </article>
             <article class="project-card">
-              <span class="project-type" data-i18n="project2Category">CLI / MCP · GrapheneOS</span>
+              <div class="project-header"><img class="project-icon" src="grafiki/projekty/pxv.svg" alt="" width="56" height="56" loading="lazy" decoding="async"><span class="project-type" data-i18n="project2Category">CLI / MCP · GrapheneOS</span></div>
               <h3 data-i18n="project2Title">PXV</h3>
               <p data-i18n="project2Copy">Lokalny zestaw CLI i MCP do przygotowywania telefonów Google Pixel z GrapheneOS, profilami użytkowników i wybranymi aplikacjami.</p>
               <div class="project-links"><a href="https://github.com/ekim-pl/pxv">GitHub ↗</a><a href="https://ekim-pl.github.io/pxv/"><span data-i18n="projectWebsite">Strona projektu</span> ↗</a></div>
             </article>
             <article class="project-card">
-              <span class="project-type" data-i18n="projectSlot">Na warsztacie</span>
+              <div class="project-header"><span class="project-type" data-i18n="projectSlot">Na warsztacie</span></div>
               <h3 data-i18n="project3Title">Już wkrótce</h3>
               <p data-i18n="projectPlaceholder">Kolejna iskra już padła. Teraz pora zamienić ją w coś, co działa.</p>
             </article>
