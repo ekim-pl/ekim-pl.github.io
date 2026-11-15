@@ -115,20 +115,6 @@ a:focus-visible {
 .resource-card h4 .ui-icon {
   color: var(--cyan);
 }
-.project-symbol {
-  display: grid;
-  place-items: center;
-  flex: 0 0 56px;
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  color: var(--cyan);
-  background: rgba(39, 229, 242, 0.06);
-}
-.project-symbol .ui-icon {
-  width: 30px;
-  height: 30px;
-}
 .hero {
   position: relative;
   min-height: 790px;
