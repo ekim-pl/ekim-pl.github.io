@@ -15,8 +15,16 @@
   </head>
   <body>
     <header class="site-header">
-      <nav class="nav wrap" aria-label="Main navigation">
-        <a class="brand" href="#start" aria-label="ekim — home"
+      <nav
+        class="nav wrap"
+        aria-label="Main navigation"
+        data-i18n-aria="navLabel"
+      >
+        <a
+          class="brand"
+          href="#start"
+          aria-label="ekim — home"
+          data-i18n-aria="homeLabel"
           ><img
             src="assets/images/branding/logo-320.webp"
             width="320"
@@ -25,11 +33,12 @@
             alt="ekim"
         /></a>
         <div class="nav-links">
-          <a href="#profile">Profile</a>
-          <a href="#workshop">Workshop</a>
-          <a href="#projects">Projects</a>
+          <a href="#profile" data-i18n="navProfile">Profile</a>
+          <a href="#workshop" data-i18n="navWorkshop">Workshop</a>
+          <a href="#projects" data-i18n="projectsTitle">Projects</a>
           <a class="nav-cta" href="#next"
-            ><span>Meet ekim</span> <span aria-hidden="true">↗</span></a
+            ><span data-i18n="navMeet">Meet ekim</span>
+            <span aria-hidden="true">↗</span></a
           >
         </div>
       </nav>
@@ -38,22 +47,26 @@
       <section class="hero" id="start" aria-labelledby="hero-title">
         <div class="hero-inner wrap">
           <div>
-            <div class="eyebrow">Digital workshop · ekim</div>
+            <div class="eyebrow" data-i18n="heroEyebrow">
+              Digital workshop · ekim
+            </div>
             <h1 id="hero-title">
-              <span>Hello,</span><br /><span
-                ><span>I&#x27;m</span> <span class="accent">ekim.</span></span
+              <span data-i18n="heroGreeting">Hello,</span><br /><span
+                ><span data-i18n="heroIntro">I&#x27;m</span>
+                <span class="accent">ekim.</span></span
               >
             </h1>
-            <p class="hero-copy">
+            <p class="hero-copy" data-i18n="heroCopy">
               A place where code meets imagination and good ideas get the space
               to take shape.
             </p>
             <div class="actions">
               <a class="button" href="#profile"
-                ><span>Step inside</span> <span aria-hidden="true">↘</span></a
+                ><span data-i18n="heroButton">Step inside</span>
+                <span aria-hidden="true">↘</span></a
               >
               <a class="text-link" href="#workshop"
-                ><span>Explore the workshop</span>
+                ><span data-i18n="heroLink">Explore the workshop</span>
                 <span aria-hidden="true">✳</span></a
               >
             </div>
@@ -64,6 +77,7 @@
               type="button"
               aria-label="Play the ekim introduction"
               aria-haspopup="dialog"
+              data-i18n-aria="playIntro"
             >
               <img
                 src="assets/images/branding/avatar-480.webp"
@@ -77,9 +91,12 @@
                 fetchpriority="high"
                 decoding="async"
                 alt="The ekim avatar wearing a hood, with turquoise eyes and headphones"
+                data-i18n-alt="avatarAlt"
               /><span class="avatar-play" aria-hidden="true">▶</span>
             </button>
-            <div class="art-label">curiosity / build / repeat</div>
+            <div class="art-label" data-i18n="artLabel">
+              curiosity / build / repeat
+            </div>
           </div>
         </div>
       </section>
@@ -99,6 +116,7 @@
               loading="lazy"
               decoding="async"
               alt="ekim in a creative workshop filled with tools and electronics"
+              data-i18n-alt="storyAlt"
             />
           </div>
           <div class="about-copy">
@@ -119,16 +137,19 @@
               >
                 <circle cx="12" cy="8" r="4" />
                 <path d="M4 21v-2a8 8 0 0 1 16 0v2" /></svg
-              ><span>01 / The vibe</span>
+              ><span data-i18n="profileKicker">01 / The vibe</span>
             </div>
             <h2 id="profile-title">
-              <span>Let an idea</span><br /><span>come alive.</span>
+              <span data-i18n="profileTitle1">Let an idea</span><br /><span
+                data-i18n="profileTitle2"
+                >come alive.</span
+              >
             </h2>
-            <p class="lead">
+            <p class="lead" data-i18n="profileLead">
               ekim is your guide to a digital workshop — a place where curiosity
               leads to the next experiment.
             </p>
-            <p>
+            <p data-i18n="profileCopy">
               The hood, turquoise eyes, and pink spark make the look instantly
               recognizable. In the background: code on a screen, tools on the
               table, and that moment when “what if…?” starts to become something
@@ -137,7 +158,7 @@
             <div class="rule"></div>
             <div class="small-note">
               <b>↳</b
-              ><span
+              ><span data-i18n="profileNote"
                 >Come on in and make yourself at home. Ideas are here to be
                 tested.</span
               >
@@ -160,9 +181,9 @@
                 >
                   <circle cx="12" cy="8" r="4" />
                   <path d="M4 21v-2a8 8 0 0 1 16 0v2" /></svg
-                ><span>About me</span>
+                ><span data-i18n="bioHeading">About me</span>
               </div>
-              <p>
+              <p data-i18n="bioPlaceholder">
                 Over 15 years of hands-on experience in programming, IT,
                 infrastructure, and software and solution architecture.
               </p>
@@ -197,13 +218,18 @@
                   <path
                     d="M14.7 6.3a5 5 0 0 0-6.3 6.3L3 18a2.1 2.1 0 0 0 3 3l5.4-5.4a5 5 0 0 0 6.3-6.3l-3 3-3-3 3-3Z"
                   /></svg
-                ><span>02 / Workshop and passions</span>
+                ><span data-i18n="workshopKicker"
+                  >02 / Workshop and passions</span
+                >
               </div>
               <h2 id="workshop-title">
-                <span>Code, matter</span><br /><span>and sound.</span>
+                <span data-i18n="workshopTitle1">Code, matter</span><br /><span
+                  data-i18n="workshopTitle2"
+                  >and sound.</span
+                >
               </h2>
             </div>
-            <p>
+            <p data-i18n="workshopCopy">
               I bring together programming, making physical things, and music. I
               automate processes, print in 3D, and experiment with sound. I use
               AI thoughtfully, drawing on over 15 years of experience in IT and
@@ -213,7 +239,7 @@
           <div class="pillars">
             <article class="pillar">
               <div class="pillar-num">
-                <span>01 — AUTOMATION</span
+                <span data-i18n="pillar1Label">01 — AUTOMATION</span
                 ><svg
                   class="ui-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -234,12 +260,15 @@
                   <path d="M12 7v5M5.5 17v-5h13v5" />
                 </svg>
               </div>
-              <h3>From idea to workflow</h3>
-              <p>Business processes, deployments, and working with AI.</p>
+              <h3 data-i18n="pillar1Title">From idea to workflow</h3>
+              <p data-i18n="pillar1Copy">
+                Business processes, deployments, and working with AI.
+              </p>
             </article>
             <article class="pillar">
               <div class="pillar-num">
-                <span>02 — 3D PRINTING &amp; MAKING</span
+                <span data-i18n="pillar2Label"
+                  >02 — 3D PRINTING &amp; MAKING</span
                 ><svg
                   class="ui-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -258,14 +287,14 @@
                   <path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5" />
                 </svg>
               </div>
-              <h3>Ideas take shape</h3>
-              <p>
+              <h3 data-i18n="pillar2Title">Ideas take shape</h3>
+              <p data-i18n="pillar2Copy">
                 Prototypes, electronics, functional parts, and personalization.
               </p>
             </article>
             <article class="pillar">
               <div class="pillar-num">
-                <span>03 — MUSIC</span
+                <span data-i18n="pillar3Label">03 — MUSIC</span
                 ><svg
                   class="ui-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -285,8 +314,10 @@
                   <ellipse cx="18" cy="15" rx="3" ry="3" />
                 </svg>
               </div>
-              <h3>Exploring sound</h3>
-              <p>Production, instruments, and finding my own sound.</p>
+              <h3 data-i18n="pillar3Title">Exploring sound</h3>
+              <p data-i18n="pillar3Copy">
+                Production, instruments, and finding my own sound.
+              </p>
             </article>
           </div>
           <div class="resource-head">
@@ -311,11 +342,11 @@
                     d="M9 1v5m6-5v5M9 18v5m6-5v5M1 9h5m-5 6h5m12-6h5m-5 6h5"
                   />
                   <rect x="10" y="10" width="4" height="4" /></svg
-                ><span>03 / The setup</span>
+                ><span data-i18n="equipmentKicker">03 / The setup</span>
               </div>
-              <h3>Machines and technologies</h3>
+              <h3 data-i18n="equipmentTitle">Machines and technologies</h3>
             </div>
-            <p>
+            <p data-i18n="equipmentCopy">
               Tools that help me turn code and designs into physical things and
               sound.
             </p>
@@ -339,15 +370,15 @@
                 >
                   <path d="m12 2 9 5v10l-9 5-9-5V7l9-5Z" />
                   <path d="m3 7 9 5 9-5m-9 5v10M7.5 4.5l9 5" /></svg
-                ><span>Machines</span>
+                ><span data-i18n="machinesTitle">Machines</span>
               </h4>
               <ul class="tag-list">
-                <li>Snapmaker U1</li>
-                <li>Anycubic Kobra S1 Combo</li>
-                <li>Snapmaker Artisan 3-in-1</li>
-                <li>Creality Otter</li>
-                <li>InfiMech MX8 Pro (coming soon)</li>
-                <li>Anylaser X1 (coming soon)</li>
+                <li data-i18n="machine1">Snapmaker U1</li>
+                <li data-i18n="machine2">Anycubic Kobra S1 Combo</li>
+                <li data-i18n="machine3">Snapmaker Artisan 3-in-1</li>
+                <li data-i18n="machine4">Creality Otter</li>
+                <li data-i18n="machine5">InfiMech MX8 Pro (coming soon)</li>
+                <li data-i18n="machine6">Anylaser X1 (coming soon)</li>
               </ul>
             </article>
             <article class="resource-card">
@@ -369,15 +400,15 @@
                   <path
                     d="m3 17 12-12 4 4L7 21H3v-4Zm10-10 4 4m2-2 2-2-4-4-2 2M3 3h6M3 3v6M3 6h3"
                   /></svg
-                ><span>Design and fabrication</span>
+                ><span data-i18n="designTitle">Design and fabrication</span>
               </h4>
-              <p class="resource-detail">
+              <p class="resource-detail" data-i18n="cadTools">
                 Fusion 360 · Tinkercad · OpenSCAD · CanvasStudio · ForemkaCAD
               </p>
-              <p class="resource-detail">
+              <p class="resource-detail" data-i18n="slicerTools">
                 Orca Slicer · Cura · Snapmaker Orca · Anycubic Slicer Next
               </p>
-              <p class="resource-detail">
+              <p class="resource-detail" data-i18n="laserTools">
                 Snapmaker Luban · Rayforge · LaserGRBL
               </p>
             </article>
@@ -398,13 +429,15 @@
                   focusable="false"
                 >
                   <path d="m8 5-6 7 6 7m8-14 6 7-6 7m-3-16-2 18" /></svg
-                ><span>Code and infrastructure</span>
+                ><span data-i18n="technologyTitle"
+                  >Code and infrastructure</span
+                >
               </h4>
               <ul class="tag-list">
-                <li>Web · mobile · backend</li>
-                <li>Laravel · TypeScript</li>
-                <li>Docker · Kubernetes · CI/CD</li>
-                <li>ESP32 · Raspberry Pi</li>
+                <li data-i18n="technology1">Web · mobile · backend</li>
+                <li data-i18n="technology2">Laravel · TypeScript</li>
+                <li data-i18n="technology3">Docker · Kubernetes · CI/CD</li>
+                <li data-i18n="technology4">ESP32 · Raspberry Pi</li>
               </ul>
             </article>
             <article class="resource-card">
@@ -426,9 +459,9 @@
                   <path d="M9 18V5l12-3v13M9 9l12-3" />
                   <ellipse cx="6" cy="18" rx="3" ry="3" />
                   <ellipse cx="18" cy="15" rx="3" ry="3" /></svg
-                ><span>Sound and instruments</span>
+                ><span data-i18n="musicTitle">Sound and instruments</span>
               </h4>
-              <p class="resource-detail">
+              <p class="resource-detail" data-i18n="musicGear">
                 Akai MPC, synthesizers, sequencers and drum machines, guitars,
                 Tonex, NAM, Ableton, production and recording.
               </p>
@@ -464,11 +497,11 @@
                     d="M3 7V5a2 2 0 0 1 2-2h5l2 3h7a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7Z"
                   />
                   <path d="m9 11-3 3 3 3m6-6 3 3-3 3" /></svg
-                ><span>04 / In progress</span>
+                ><span data-i18n="projectsKicker">04 / In progress</span>
               </div>
-              <h2 id="projects-title">Projects</h2>
+              <h2 id="projects-title" data-i18n="projectsTitle">Projects</h2>
             </div>
-            <p>
+            <p data-i18n="projectsCopy">
               Explore workshop projects — from Android apps to device
               preparation tools. Browse the source code and documentation.
             </p>
@@ -484,18 +517,21 @@
                   height="56"
                   loading="lazy"
                   decoding="async"
-                /><span class="project-type">Android app</span>
+                /><span class="project-type" data-i18n="project1Category"
+                  >Android app</span
+                >
               </div>
-              <h3>Android FM1 Flasher</h3>
-              <p>
+              <h3 data-i18n="project1Title">Android FM1 Flasher</h3>
+              <p data-i18n="project1Copy">
                 An Android app for browsing firmware and updating the M-VAVE
                 FM-1 over USB MIDI.
               </p>
               <ul
                 class="tag-list project-tags"
                 aria-label="Categories and technologies"
+                data-i18n-aria="projectTagsLabel"
               >
-                <li class="tag-category">Music</li>
+                <li class="tag-category" data-i18n="tagMusic">Music</li>
                 <li>Android</li>
                 <li>Kotlin</li>
                 <li>USB MIDI</li>
@@ -504,7 +540,7 @@
                 <a href="https://github.com/ekim-pl/android-fm1-flasher"
                   >GitHub ↗</a
                 ><a href="https://ekim-pl.github.io/android-fm1-flasher/"
-                  ><span>Project site</span> ↗</a
+                  ><span data-i18n="projectWebsite">Project site</span> ↗</a
                 >
               </div>
             </article>
@@ -530,10 +566,12 @@
                     />
                   </svg>
                 </div>
-                <span class="project-type">Community directory</span>
+                <span class="project-type" data-i18n="project3Category"
+                  >Community directory</span
+                >
               </div>
-              <h3>Awesome FM-1</h3>
-              <p>
+              <h3 data-i18n="project3Title">Awesome FM-1</h3>
+              <p data-i18n="project3Copy">
                 A community-maintained firmware directory for the M-VAVE FM-1.
                 Projects, original publisher links, and release information in
                 one place.
@@ -541,8 +579,11 @@
               <ul
                 class="tag-list project-tags"
                 aria-label="Categories and technologies"
+                data-i18n-aria="projectTagsLabel"
               >
-                <li class="tag-category">Firmware directory</li>
+                <li class="tag-category" data-i18n="tagFirmwareDirectory">
+                  Firmware directory
+                </li>
                 <li>Python</li>
                 <li>JSON</li>
               </ul>
@@ -560,18 +601,23 @@
                   height="56"
                   loading="lazy"
                   decoding="async"
-                /><span class="project-type">CLI / MCP · GrapheneOS</span>
+                /><span class="project-type" data-i18n="project2Category"
+                  >CLI / MCP · GrapheneOS</span
+                >
               </div>
-              <h3>PXV</h3>
-              <p>
+              <h3 data-i18n="project2Title">PXV</h3>
+              <p data-i18n="project2Copy">
                 A local CLI and MCP toolkit for preparing Google Pixel phones
                 with GrapheneOS, user profiles, and selected apps.
               </p>
               <ul
                 class="tag-list project-tags"
                 aria-label="Categories and technologies"
+                data-i18n-aria="projectTagsLabel"
               >
-                <li class="tag-category">Automation</li>
+                <li class="tag-category" data-i18n="tagAutomation">
+                  Automation
+                </li>
                 <li>TypeScript</li>
                 <li>GrapheneOS</li>
                 <li>CLI</li>
@@ -580,7 +626,7 @@
               <div class="project-links">
                 <a href="https://github.com/ekim-pl/pxv">GitHub ↗</a
                 ><a href="https://ekim-pl.github.io/pxv/"
-                  ><span>Project site</span> ↗</a
+                  ><span data-i18n="projectWebsite">Project site</span> ↗</a
                 >
               </div>
             </article>
@@ -588,7 +634,11 @@
         </div>
       </section>
 
-      <section class="banner" aria-label="ekim in the workshop">
+      <section
+        class="banner"
+        aria-label="ekim in the workshop"
+        data-i18n-aria="bannerLabel"
+      >
         <img
           src="assets/images/branding/cover-1080.webp"
           srcset="
@@ -601,9 +651,137 @@
           loading="lazy"
           decoding="async"
           alt="ekim working on a small electronic project in the workshop"
+          data-i18n-alt="bannerAlt"
         />
         <div class="banner-caption">
-          <p>Think it · make it · make it better</p>
+          <p data-i18n="footerText">Think it · make it · make it better</p>
+        </div>
+      </section>
+
+      <section
+        class="section gallery-section"
+        id="gallery"
+        aria-labelledby="gallery-title"
+      >
+        <div class="wrap">
+          <div class="section-kicker">
+            <svg
+              class="ui-icon"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="3" />
+              <circle cx="8" cy="8" r="1.5" />
+              <path d="m3 17 6-6 4 4 3-3 5 5" /></svg
+            ><span data-i18n="galleryKicker">05 / Workshop moments</span>
+          </div>
+          <h2 id="gallery-title" data-i18n="galleryTitle">
+            Inside the workshop.
+          </h2>
+          <p class="gallery-intro" data-i18n="galleryIntro">
+            Ideas in motion, sounds taking shape, and the details in between. A
+            space for moments from Instagram and YouTube.
+          </p>
+          <div class="gallery-grid">
+            <article class="gallery-card">
+              <div class="gallery-frame gallery-youtube">
+                <img
+                  src="assets/images/branding/cover-1080.webp"
+                  width="1080"
+                  height="360"
+                  loading="lazy"
+                  decoding="async"
+                  alt="ekim working at an electronics bench"
+                />
+                <span class="gallery-platform"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <rect x="2" y="5" width="20" height="14" rx="4" />
+                    <path d="m10 9 5 3-5 3Z" /></svg
+                  >YouTube</span
+                >
+                <span class="gallery-placeholder" data-i18n="galleryVideoLabel"
+                  >Video coming soon</span
+                >
+              </div>
+              <div class="gallery-content">
+                <h3 data-i18n="galleryVideoTitle">
+                  Builds, beats &amp; experiments.
+                </h3>
+                <p data-i18n="galleryVideoCopy">
+                  A space for a selected video: a project, a process, or a sound
+                  worth sharing.
+                </p>
+                <a
+                  class="gallery-channel"
+                  href="https://www.youtube.com/@ekim-pl"
+                  ><span data-i18n="galleryVideoLink">Explore the channel</span
+                  ><span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+            <article class="gallery-card">
+              <div class="gallery-frame gallery-instagram">
+                <img
+                  src="assets/images/branding/story-480.webp"
+                  srcset="
+                    assets/images/branding/story-480.webp 480w,
+                    assets/images/branding/story-800.webp 800w
+                  "
+                  sizes="(max-width: 560px) calc(100vw - 34px), 460px"
+                  width="480"
+                  height="853"
+                  loading="lazy"
+                  decoding="async"
+                  alt="ekim in the workshop"
+                  data-i18n-alt="bannerLabel"
+                />
+                <span class="gallery-platform"
+                  ><svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="1.7"
+                    aria-hidden="true"
+                    focusable="false"
+                  >
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" /></svg
+                  >Instagram</span
+                >
+                <span class="gallery-placeholder" data-i18n="galleryPostLabel"
+                  >Post coming soon</span
+                >
+              </div>
+              <div class="gallery-content">
+                <h3 data-i18n="galleryPostTitle">The little details.</h3>
+                <p data-i18n="galleryPostCopy">
+                  A space for a selected post or reel, straight from the
+                  workbench.
+                </p>
+                <a
+                  class="gallery-channel"
+                  href="https://www.instagram.com/ekimpl/"
+                  ><span data-i18n="galleryPostLink">Explore the feed</span
+                  ><span aria-hidden="true">↗</span></a
+                >
+              </div>
+            </article>
+          </div>
+          <p class="gallery-note" data-i18n="galleryNote">
+            Selected videos, posts, and reels are coming here. For now, explore
+            the channels.
+          </p>
         </div>
       </section>
 
@@ -629,14 +807,15 @@
               <path
                 d="m7 12-4 1 1-5 6-1m2 10-1 4 5-1 1-6M6 16c-3 0-3 5-3 5s5 0 5-3"
               /></svg
-            ><span>05 / To be continued</span>
+            ><span data-i18n="closingKicker">06 / To be continued</span>
           </div>
           <h2 id="closing-title">
-            <span>The workshop is open.</span><br /><span
+            <span data-i18n="closingTitle1">The workshop is open.</span
+            ><br /><span data-i18n="closingTitle2"
               >What will you dream up?</span
             >
           </h2>
-          <p>
+          <p data-i18n="closingCopy">
             This is just the beginning. Stay a while — you might find your next
             idea right here.
           </p>
@@ -645,15 +824,19 @@
     </main>
     <footer class="footer">
       <div class="footer-inner wrap">
-        <a href="#start" aria-label="Back to top"
+        <a href="#start" aria-label="Back to top" data-i18n-aria="backToTop"
           ><img
             src="assets/images/branding/logo-320.webp"
             width="320"
             height="128"
             decoding="async"
             alt="ekim" /></a
-        ><span>ekim digital workshop</span>
-        <nav class="social-links" aria-label="Social profiles">
+        ><span data-i18n="footerText">Think it · make it · make it better</span>
+        <nav
+          class="social-links"
+          aria-label="Social profiles"
+          data-i18n-aria="socialLabel"
+        >
           <a href="https://www.instagram.com/ekimpl/"
             ><svg
               xmlns="http://www.w3.org/2000/svg"
@@ -734,6 +917,39 @@
             ><span>Discord</span></a
           >
         </nav>
+        <div class="footer-language">
+          <div
+            class="language-switch"
+            role="group"
+            aria-label="Choose language"
+            data-i18n-aria="languageLabel"
+          >
+            <button
+              type="button"
+              data-language="en"
+              lang="en"
+              aria-label="English"
+              aria-pressed="true"
+            >
+              EN
+            </button>
+            <button
+              type="button"
+              data-language="pl"
+              lang="pl"
+              aria-label="Polski"
+              aria-pressed="false"
+            >
+              PL
+            </button>
+          </div>
+          <span
+            class="language-status"
+            id="language-status"
+            role="status"
+            hidden
+          ></span>
+        </div>
         <span>© 2026</span>
       </div>
     </footer>
@@ -742,12 +958,15 @@
       id="intro-dialog"
       aria-labelledby="intro-title"
     >
-      <h2 class="sr-only" id="intro-title">Meet ekim — video</h2>
+      <h2 class="sr-only" id="intro-title" data-i18n="introTitle">
+        Meet ekim — video
+      </h2>
       <button
         class="intro-close"
         type="button"
         aria-label="Close video"
         autofocus
+        data-i18n-aria="closeIntro"
       >
         ×
       </button>

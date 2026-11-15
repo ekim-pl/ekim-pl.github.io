@@ -2,7 +2,7 @@
 
 Source for [ekim-pl.github.io](https://ekim-pl.github.io/).
 
-The public website and its source use English. The site is static, with no build step or runtime dependencies.
+The website defaults to English and offers Polish through the footer language switch. Source identifiers, filenames, and comments use English. The site is static, with no build step or runtime dependencies.
 
 ## Structure
 
@@ -11,12 +11,13 @@ The public website and its source use English. The site is static, with no build
 - `scripts/main.js` — the introduction video dialog and playback lifecycle.
 - `assets/images/branding/` — responsive WebP branding images.
 - `assets/images/projects/` — original project SVG icons.
-- `assets/videos/intro.mp4` — the English introduction video.
+- `assets/videos/intro-en.mp4` and `intro-pl.mp4` — localized introduction videos.
+- `locales/` — English and Polish copy; translations are fetched only when the visitor switches language.
 - `.nojekyll` — serve the static files without Jekyll processing.
 
 ## Editing
 
-Edit the page directly. Keep filenames, section IDs, comments, and visible text in English.
+Edit the page directly. Keep filenames, section IDs, and comments in English. Update both translation files when editing localized text, and keep the initial HTML in English.
 Use relative asset URLs so the page works on GitHub Pages. Preserve image dimensions and responsive sources.
 
 The avatar opens the video dialog. Video data is requested only after activation; closing the dialog stops playback.
@@ -26,4 +27,6 @@ Animation follows the visitor's reduced-motion preference.
 
 GitHub Pages publishes the repository root from `main`. Push changes to `main` to deploy.
 
-Polish translations, the Polish introduction, and unused full-resolution images were archived separately before this refactor; they are not part of the public site.
+The footer switch loads `locales/en.json` or `locales/pl.json` and updates page content and accessible labels. The avatar plays the matching introduction. Language preference is not stored; each visit starts in English. Unused full-resolution images were archived separately.
+
+Section 05 reserves gallery space for selected Instagram posts and YouTube videos. Its current artwork is illustrative, with links to the channels; no third-party embeds are loaded. Section 06 is the closing section.
