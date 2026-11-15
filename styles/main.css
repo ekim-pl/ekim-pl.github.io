@@ -1098,3 +1098,16 @@ h2 {
   color: var(--muted);
   font-size: 11px;
 }
+
+.gallery-card-instagram {
+  position: relative;
+}
+.gallery-card-instagram .gallery-channel::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
+.gallery-card-instagram:focus-within {
+  outline: 2px solid var(--cyan);
+  outline-offset: 4px;
+}

@@ -29,4 +29,4 @@ GitHub Pages publishes the repository root from `main`. Push changes to `main` t
 
 The footer switch loads `locales/en.json` or `locales/pl.json` and updates page content and accessible labels. The avatar plays the matching introduction. Language preference is not stored; each visit starts in English. Unused full-resolution images were archived separately.
 
-Section 05 reserves gallery space for selected Instagram posts and YouTube videos. Its current artwork is illustrative, with links to the channels; no third-party embeds are loaded. Section 06 is the closing section.
+Section 05 reserves gallery space for selected Instagram posts and YouTube videos. The Instagram card links to the published FM-1 Reel and uses its local, optimized cover image. The YouTube card remains a placeholder linking to the channel. No third-party embeds are loaded. Section 06 is the closing section.

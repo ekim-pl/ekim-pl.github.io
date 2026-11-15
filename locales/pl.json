@@ -98,10 +98,11 @@
   "galleryVideoCopy": "Miejsce na wybrany film: projekt, proces lub brzmienie, którym warto się podzielić.",
   "galleryVideoLabel": "Film już wkrótce",
   "galleryVideoLink": "Zajrzyj na kanał",
-  "galleryPostTitle": "Liczą się detale.",
-  "galleryPostCopy": "Miejsce na wybrany post lub rolkę, prosto z warsztatu.",
-  "galleryPostLabel": "Post już wkrótce",
-  "galleryPostLink": "Zajrzyj na profil",
-  "galleryNote": "Tutaj pojawią się wybrane filmy, posty i rolki. Na razie zajrzyj na moje profile.",
-  "languageError": "Nie udało się zmienić języka. Spróbuj ponownie."
+  "galleryPostTitle": "Jeden telefon. Trzy FM-1.",
+  "galleryPostCopy": "Poznaj FM-1 Flasher i Awesome FM-1: aktualizacje firmware’u z Androida i społecznościowy katalog firmware’u dla M-VAVE FM-1.",
+  "galleryPostLabel": "Rolka Instagram",
+  "galleryPostLink": "Obejrzyj na Instagramie",
+  "galleryNote": "Obejrzyj rolkę o FM-1 na Instagramie. Wkrótce pojawią się tu kolejne materiały z warsztatu.",
+  "languageError": "Nie udało się zmienić języka. Spróbuj ponownie.",
+  "galleryPostAlt": "Ilustracja FM-1 Flasher przedstawiająca telefon, hub OTG i trzy syntezatory FM-1"
 }

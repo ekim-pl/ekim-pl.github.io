@@ -98,10 +98,11 @@
   "galleryVideoCopy": "A space for a selected video: a project, a process, or a sound worth sharing.",
   "galleryVideoLabel": "Video coming soon",
   "galleryVideoLink": "Explore the channel",
-  "galleryPostTitle": "The little details.",
-  "galleryPostCopy": "A space for a selected post or reel, straight from the workbench.",
-  "galleryPostLabel": "Post coming soon",
-  "galleryPostLink": "Explore the feed",
-  "galleryNote": "Selected videos, posts, and reels are coming here. For now, explore the channels.",
-  "languageError": "Could not change the language. Please try again."
+  "galleryPostTitle": "One phone. Three FM-1s.",
+  "galleryPostCopy": "Meet FM-1 Flasher and Awesome FM-1: Android firmware updates and a community firmware directory for the M-VAVE FM-1.",
+  "galleryPostLabel": "Instagram Reel",
+  "galleryPostLink": "Watch on Instagram",
+  "galleryNote": "Watch the FM-1 reel on Instagram. More workshop videos and posts are coming here.",
+  "languageError": "Could not change the language. Please try again.",
+  "galleryPostAlt": "FM-1 Flasher illustration showing a phone, an OTG hub, and three FM-1 synthesizers"
 }
