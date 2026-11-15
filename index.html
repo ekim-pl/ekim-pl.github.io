@@ -12,6 +12,20 @@
     <title>ekim — digital workshop</title>
     <link rel="stylesheet" href="styles/main.css" />
     <script src="scripts/main.js" defer></script>
+    <script>
+      function loadScript(a) {
+        var b = document.getElementsByTagName("head")[0],
+          c = document.createElement("script");
+        c.type = "text/javascript";
+        c.src = "https://tracker.metricool.com/resources/be.js";
+        c.onreadystatechange = a;
+        c.onload = a;
+        b.appendChild(c);
+      }
+      loadScript(function () {
+        beTracker.t({ hash: "3ff1e3874ad3d6dcd9b05b82443b4fd5" });
+      });
+    </script>
   </head>
   <body>
     <header class="site-header">
