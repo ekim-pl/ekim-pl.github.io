@@ -98,11 +98,11 @@
   "galleryVideoCopy": "A space for a selected video: a project, a process, or a sound worth sharing.",
   "galleryVideoLabel": "Video coming soon",
   "galleryVideoLink": "Explore the channel",
-  "galleryPostTitle": "One phone. Three FM-1s.",
-  "galleryPostCopy": "Meet FM-1 Flasher and Awesome FM-1: Android firmware updates and a community firmware directory for the M-VAVE FM-1.",
-  "galleryPostLabel": "Instagram Reel",
+  "galleryPostTitle": "Your FM-1 setup. More possibilities.",
+  "galleryPostCopy": "Browse firmware on Android and update the FM-1 instruments connected to your USB hub, one at a time. Discover more with Awesome FM-1.",
+  "galleryPostLabel": "Reel",
   "galleryPostLink": "Watch on Instagram",
   "galleryNote": "Watch the FM-1 reel on Instagram. More workshop videos and posts are coming here.",
   "languageError": "Could not change the language. Please try again.",
-  "galleryPostAlt": "FM-1 Flasher illustration showing a phone, an OTG hub, and three FM-1 synthesizers"
+  "galleryPostAlt": "FM-1 Flasher on a phone connected through a USB hub to multiple FM-1 synthesizers"
 }
