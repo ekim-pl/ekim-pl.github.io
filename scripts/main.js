@@ -11,7 +11,7 @@ document.querySelector(".avatar-trigger").addEventListener("click", () => {
     introMessage.hidden = false;
   });
 });
-document
+introDialog
   .querySelector(".intro-close")
   .addEventListener("click", () => introDialog.close());
 introDialog.addEventListener("click", (event) => {
@@ -110,17 +110,16 @@ languageButtons.forEach((button) => {
   button.addEventListener("click", () => setLanguage(button.dataset.language));
 });
 
-const shortsDialog = document.getElementById("shorts-dialog");
-const shortsVideo = shortsDialog.querySelector("iframe");
-document.querySelectorAll(".shorts-trigger").forEach((trigger) => {
-  trigger.addEventListener("click", (event) => {
-    event.preventDefault();
-    shortsVideo.src = "https://www.youtube-nocookie.com/embed/QG_VsBfkFgI?autoplay=1&playsinline=1";
-    shortsDialog.showModal();
-  });
+const galleryVideoDialog = document.getElementById("gallery-video-dialog");
+const galleryVideo = galleryVideoDialog.querySelector("iframe");
+document.querySelector(".gallery-video-trigger").addEventListener("click", (event) => {
+  if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+  event.preventDefault();
+  galleryVideoDialog.showModal();
+  galleryVideo.src = "https://www.youtube-nocookie.com/embed/0mCsxZayMhk?autoplay=1&playsinline=1&rel=0";
 });
-shortsDialog.querySelector(".shorts-close").addEventListener("click", () => shortsDialog.close());
-shortsDialog.addEventListener("click", (event) => {
-  if (event.target === shortsDialog) shortsDialog.close();
+galleryVideoDialog.querySelector(".intro-close").addEventListener("click", () => galleryVideoDialog.close());
+galleryVideoDialog.addEventListener("click", (event) => {
+  if (event.target === galleryVideoDialog) galleryVideoDialog.close();
 });
-shortsDialog.addEventListener("close", () => shortsVideo.removeAttribute("src"));
+galleryVideoDialog.addEventListener("close", () => galleryVideo.removeAttribute("src"));

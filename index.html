@@ -23,8 +23,8 @@
       data-page-description
     />
     <title>ekim — digital workshop</title>
-    <link rel="stylesheet" href="styles/main.css" />
-    <script src="scripts/main.js" defer></script>
+    <link rel="stylesheet" href="styles/main.css?v=workshop-3" />
+    <script src="scripts/main.js?v=workshop-3" defer></script>
     <script>
       function loadScript(a) {
         var b = document.getElementsByTagName("head")[0],
@@ -722,121 +722,57 @@
             Inside the workshop.
           </h2>
           <p class="gallery-intro" data-i18n="galleryIntro">
-            Ideas in motion, sounds taking shape, and the details in between. A
-            space for moments from Instagram and YouTube.
+            New sounds, practical demos and moments from the workbench. Watch on YouTube or step behind the scenes on Instagram.
           </p>
           <div class="gallery-grid">
-            <article class="gallery-card">
+            <a class="gallery-card gallery-card-youtube gallery-video-trigger"
+              href="https://www.youtube.com/watch?v=0mCsxZayMhk"
+              aria-haspopup="dialog" aria-controls="gallery-video-dialog">
               <div class="gallery-frame gallery-youtube">
-                <a class="shorts-trigger" aria-haspopup="dialog" href="https://www.youtube.com/shorts/QG_VsBfkFgI" target="_blank" rel="noopener noreferrer" aria-label="YouTube: Your FM-1. Your Community. | Free Android Flasher">
-                <img
-                  src="assets/images/gallery/fm1-flasher-poster.webp"
-                  width="1672"
-                  height="941"
-                  loading="lazy"
-                  decoding="async"
-                  alt="Synthesizer and phone on an electronics workbench"
-                />
-                </a>
-                <span class="poster-projects" aria-hidden="true">
-                  <span class="poster-project"><img src="assets/images/projects/fm1-flasher.svg" alt="" width="48" height="48" /><span>FM1 Flasher</span></span>
-                  <span class="poster-plus">+</span>
-                  <span class="poster-project"><img src="assets/images/projects/awesome-fm1.svg" alt="" width="48" height="48" /><span>Awesome FM-1</span></span>
+                <img src="assets/images/gallery/fm1-firmware-video.webp"
+                  width="1280" height="720" loading="lazy" decoding="async"
+                  alt="FM-1 Flasher &amp; Awesome FM-1 — ChoralRoot, SHRUB &amp; SLOOP" />
+                <span class="gallery-platform">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                    <rect x="2" y="5" width="20" height="14" rx="4" /><path d="m10 9 5 3-5 3Z" />
+                  </svg>YouTube
                 </span>
-                <span class="gallery-platform"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <rect x="2" y="5" width="20" height="14" rx="4" />
-                    <path d="m10 9 5 3-5 3Z" /></svg
-                  >YouTube</span
-                >
-                <span class="gallery-placeholder" data-i18n="galleryVideoLabel"
-                  >Shorts</span
-                >
+                <span class="gallery-play" aria-hidden="true">▶</span>
+                <span class="gallery-format" data-i18n="galleryVideoLabel">Latest video</span>
               </div>
               <div class="gallery-content">
-                <h3 data-i18n="galleryVideoTitle">
-                  Your FM-1. Your Community.
-                </h3>
-                <p data-i18n="galleryVideoCopy">
-                  Discover the free Android flasher for FM-1.
-                </p>
-                <a
-                  class="gallery-channel shorts-trigger"
-                  aria-haspopup="dialog"
-                  href="https://www.youtube.com/shorts/QG_VsBfkFgI"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><span data-i18n="galleryVideoLink">Watch the Short</span
-                  ><span aria-hidden="true">↗</span></a
-                >
+                <span class="gallery-eyebrow">FM-1 Flasher + Awesome FM-1</span>
+                <h3 data-i18n="galleryVideoTitle">One FM-1. More possibilities.</h3>
+                <p data-i18n="galleryVideoCopy">Explore ChoralRoot, SHRUB and SLOOP. See how FM-1 Flasher and Awesome FM-1 open up new sounds for your synthesizer.</p>
+                <span class="gallery-channel"><span data-i18n="galleryVideoLink">Play video</span><span aria-hidden="true">▶</span></span>
               </div>
-            </article>
-            <article class="gallery-card gallery-card-instagram">
-              <div class="gallery-meta">
-                <span class="gallery-platform"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="1.7"
-                    aria-hidden="true"
-                    focusable="false"
-                  >
-                    <rect x="3" y="3" width="18" height="18" rx="5" />
-                    <circle cx="12" cy="12" r="4" /></svg
-                  >Instagram</span
-                ><span class="gallery-placeholder" data-i18n="galleryPostLabel"
-                  >Reel</span
-                >
-              </div>
+            </a>
+            <a class="gallery-card gallery-card-instagram"
+              href="https://www.instagram.com/stories/ekimpl/4031022301801472427/"
+              target="_blank" rel="noopener noreferrer">
               <div class="gallery-frame gallery-instagram">
-                <img
-                  src="assets/images/gallery/fm1-setup-480.webp"
-                  srcset="
-                    assets/images/gallery/fm1-setup-480.webp   480w,
-                    assets/images/gallery/fm1-setup-800.webp   800w,
-                    assets/images/gallery/fm1-setup-1200.webp 1200w
-                  "
-                  sizes="(max-width: 560px) calc(100vw - 34px), (max-width: 800px) 40vw, 460px"
-                  width="480"
-                  height="320"
-                  loading="lazy"
-                  decoding="async"
+                <img src="assets/images/gallery/fm1-setup-800.webp"
+                  srcset="assets/images/gallery/fm1-setup-480.webp 480w, assets/images/gallery/fm1-setup-800.webp 800w, assets/images/gallery/fm1-setup-1200.webp 1200w"
+                  sizes="(max-width: 680px) calc(100vw - 48px), (max-width: 1208px) calc(50vw - 34px), 570px"
+                  width="800" height="533" loading="lazy" decoding="async"
                   alt="FM-1 Flasher on a phone connected through a USB hub to multiple FM-1 synthesizers"
-                  data-i18n-alt="galleryPostAlt"
-                />
+                  data-i18n-alt="galleryPostAlt" />
+                <span class="gallery-platform">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                    <rect x="3" y="3" width="18" height="18" rx="5" /><circle cx="12" cy="12" r="4" /><circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none" />
+                  </svg>Instagram
+                </span>
+                <span class="gallery-story" aria-hidden="true"><img src="assets/images/projects/fm1-flasher.svg" alt="" width="48" height="48" /></span>
+                <span class="gallery-format" data-i18n="galleryPostLabel">Story</span>
               </div>
               <div class="gallery-content">
-                <h3 data-i18n="galleryPostTitle">
-                  Your FM-1 setup. More possibilities.
-                </h3>
-                <p data-i18n="galleryPostCopy">
-                  Browse firmware on Android and update the FM-1 instruments
-                  connected to your USB hub, one at a time. Discover more with
-                  Awesome FM-1.
-                </p>
-                <a
-                  class="gallery-channel"
-                  href="https://www.instagram.com/reel/DfxAG_UGb8z/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  ><span data-i18n="galleryPostLink">Watch on Instagram</span
-                  ><span aria-hidden="true">↗</span></a
-                >
+                <span class="gallery-eyebrow">@ekimpl / FM-1 Flasher</span>
+                <h3 data-i18n="galleryPostTitle">FM-1 Flasher. Behind the scenes.</h3>
+                <p data-i18n="galleryPostCopy">A phone, a USB hub and a world of sounds. Take a closer look at FM-1 Flasher in the workshop on Instagram.</p>
+                <span class="gallery-channel"><span data-i18n="galleryPostLink">View on Instagram</span><span aria-hidden="true">↗</span></span>
               </div>
-            </article>
+            </a>
           </div>
-          <p class="gallery-note" data-i18n="galleryNote">
-            Watch the FM-1 reel on Instagram. More workshop videos and posts are
-            coming here.
-          </p>
         </div>
       </section>
 
@@ -1026,9 +962,9 @@
         <span>© 2026</span>
       </div>
     </footer>
-    <dialog class="intro-dialog" id="shorts-dialog" aria-label="Your FM-1. Your Community. | Free Android Flasher">
-      <button class="intro-close shorts-close" type="button" aria-label="Close video" data-i18n-aria="closeIntro" autofocus>×</button>
-      <iframe class="intro-video shorts-video" title="Your FM-1. Your Community. | Free Android Flasher" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    <dialog class="intro-dialog gallery-video-dialog" id="gallery-video-dialog" aria-label="FM-1 Flasher &amp; Awesome FM-1 | ChoralRoot, SHRUB &amp; SLOOP">
+      <button class="intro-close" type="button" aria-label="Close video" data-i18n-aria="closeIntro" autofocus>×</button>
+      <iframe class="gallery-video" title="FM-1 Flasher &amp; Awesome FM-1 | ChoralRoot, SHRUB &amp; SLOOP" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
     </dialog>
     <dialog
       class="intro-dialog"
