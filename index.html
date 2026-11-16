@@ -728,14 +728,21 @@
           <div class="gallery-grid">
             <article class="gallery-card">
               <div class="gallery-frame gallery-youtube">
+                <a class="shorts-trigger" aria-haspopup="dialog" href="https://www.youtube.com/shorts/QG_VsBfkFgI" target="_blank" rel="noopener noreferrer" aria-label="YouTube: Your FM-1. Your Community. | Free Android Flasher">
                 <img
-                  src="assets/images/branding/cover-1080.webp"
-                  width="1080"
-                  height="360"
+                  src="assets/images/gallery/fm1-flasher-poster.webp"
+                  width="1672"
+                  height="941"
                   loading="lazy"
                   decoding="async"
-                  alt="ekim working at an electronics bench"
+                  alt="Synthesizer and phone on an electronics workbench"
                 />
+                </a>
+                <span class="poster-projects" aria-hidden="true">
+                  <span class="poster-project"><img src="assets/images/projects/fm1-flasher.svg" alt="" width="48" height="48" /><span>FM1 Flasher</span></span>
+                  <span class="poster-plus">+</span>
+                  <span class="poster-project"><img src="assets/images/projects/awesome-fm1.svg" alt="" width="48" height="48" /><span>Awesome FM-1</span></span>
+                </span>
                 <span class="gallery-platform"
                   ><svg
                     viewBox="0 0 24 24"
@@ -750,23 +757,23 @@
                   >YouTube</span
                 >
                 <span class="gallery-placeholder" data-i18n="galleryVideoLabel"
-                  >Video coming soon</span
+                  >Shorts</span
                 >
               </div>
               <div class="gallery-content">
                 <h3 data-i18n="galleryVideoTitle">
-                  Builds, beats &amp; experiments.
+                  Your FM-1. Your Community.
                 </h3>
                 <p data-i18n="galleryVideoCopy">
-                  A space for a selected video: a project, a process, or a sound
-                  worth sharing.
+                  Discover the free Android flasher for FM-1.
                 </p>
                 <a
-                  class="gallery-channel"
-                  href="https://www.youtube.com/@ekim-pl"
+                  class="gallery-channel shorts-trigger"
+                  aria-haspopup="dialog"
+                  href="https://www.youtube.com/shorts/QG_VsBfkFgI"
                   target="_blank"
                   rel="noopener noreferrer"
-                  ><span data-i18n="galleryVideoLink">Explore the channel</span
+                  ><span data-i18n="galleryVideoLink">Watch the Short</span
                   ><span aria-hidden="true">↗</span></a
                 >
               </div>
@@ -1019,6 +1026,10 @@
         <span>© 2026</span>
       </div>
     </footer>
+    <dialog class="intro-dialog" id="shorts-dialog" aria-label="Your FM-1. Your Community. | Free Android Flasher">
+      <button class="intro-close shorts-close" type="button" aria-label="Close video" data-i18n-aria="closeIntro" autofocus>×</button>
+      <iframe class="intro-video shorts-video" title="Your FM-1. Your Community. | Free Android Flasher" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe>
+    </dialog>
     <dialog
       class="intro-dialog"
       id="intro-dialog"
