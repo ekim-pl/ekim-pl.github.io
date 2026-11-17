@@ -116,7 +116,7 @@ document.querySelector(".gallery-video-trigger").addEventListener("click", (even
   if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
   event.preventDefault();
   galleryVideoDialog.showModal();
-  galleryVideo.src = "https://www.youtube-nocookie.com/embed/0mCsxZayMhk?autoplay=1&playsinline=1&rel=0";
+  galleryVideo.src = "https://www.youtube-nocookie.com/embed/VHEe8KECsPo?autoplay=1&playsinline=1&rel=0";
 });
 galleryVideoDialog.querySelector(".intro-close").addEventListener("click", () => galleryVideoDialog.close());
 galleryVideoDialog.addEventListener("click", (event) => {

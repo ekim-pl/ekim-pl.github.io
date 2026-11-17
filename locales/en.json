@@ -94,8 +94,8 @@
   "galleryKicker": "05 / Workshop moments",
   "galleryTitle": "Inside the workshop.",
   "galleryIntro": "New sounds, practical demos and moments from the workbench. Watch on YouTube or step behind the scenes on Instagram.",
-  "galleryVideoTitle": "One FM-1. More possibilities.",
-  "galleryVideoCopy": "Explore ChoralRoot, SHRUB and SLOOP. See how FM-1 Flasher and Awesome FM-1 open up new sounds for your synthesizer.",
+  "galleryVideoTitle": "FM-1 Flasher. Now on F-Droid.",
+  "galleryVideoCopy": "Detect the flash chip, export a full backup and install compatible firmware. A 45-second walkthrough of the release available through the project’s F-Droid repository.",
   "galleryVideoLabel": "Latest video",
   "galleryVideoLink": "Play video",
   "galleryPostTitle": "FM-1 Flasher. Behind the scenes.",
@@ -103,5 +103,6 @@
   "galleryPostLabel": "Story",
   "galleryPostLink": "View on Instagram",
   "languageError": "Could not change the language. Please try again.",
-  "galleryPostAlt": "FM-1 Flasher on a phone connected through a USB hub to multiple FM-1 synthesizers"
+  "galleryPostAlt": "FM-1 Flasher on a phone connected through a USB hub to multiple FM-1 synthesizers",
+  "galleryVideoAlt": "FM-1 Flasher — Now on F-Droid. Detect, back up and flash."
 }

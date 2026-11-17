@@ -94,8 +94,8 @@
   "galleryKicker": "05 / Chwile z warsztatu",
   "galleryTitle": "Zajrzyj do warsztatu.",
   "galleryIntro": "Nowe brzmienia, praktyczne pokazy i chwile przy warsztatowym stole. Obejrzyj film na YouTube lub zajrzyj za kulisy na Instagramie.",
-  "galleryVideoTitle": "Jeden FM-1. Więcej możliwości.",
-  "galleryVideoCopy": "Poznaj ChoralRoot, SHRUB i SLOOP. Zobacz, jak FM-1 Flasher i Awesome FM-1 otwierają nowe brzmienia dla Twojego syntezatora.",
+  "galleryVideoTitle": "FM-1 Flasher. Teraz przez F-Droid.",
+  "galleryVideoCopy": "Wykryj pamięć flash, wyeksportuj pełną kopię zapasową i wgraj zgodny firmware. Zobacz 45-sekundowy pokaz wydania dostępnego w repozytorium F-Droid projektu.",
   "galleryVideoLabel": "Najnowszy film",
   "galleryVideoLink": "Odtwórz film",
   "galleryPostTitle": "FM-1 Flasher. Za kulisami.",
@@ -103,5 +103,6 @@
   "galleryPostLabel": "Relacja",
   "galleryPostLink": "Zobacz na Instagramie",
   "languageError": "Nie udało się zmienić języka. Spróbuj ponownie.",
-  "galleryPostAlt": "FM-1 Flasher na telefonie połączonym przez hub USB z wieloma syntezatorami FM-1"
+  "galleryPostAlt": "FM-1 Flasher na telefonie połączonym przez hub USB z wieloma syntezatorami FM-1",
+  "galleryVideoAlt": "FM-1 Flasher — teraz przez F-Droid. Wykrywanie pamięci, kopia zapasowa i wgrywanie firmware’u."
 }
